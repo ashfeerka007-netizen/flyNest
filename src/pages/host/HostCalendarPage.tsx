@@ -32,6 +32,7 @@ export const HostCalendarPage: React.FC = () => {
   const daysInMonth = Array.from({ length: 31 }, (_, i) => i + 1);
 
   const handleDateClick = (day: number) => {
+    if (!selectedProperty) return;
     const dayStr = day < 10 ? `0${day}` : `${day}`;
     const dateStr = `2026-12-${dayStr}`;
     toggleDateAvailability(selectedProperty.id, dateStr);

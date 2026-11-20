@@ -73,7 +73,10 @@ export const MarketplaceProvider: React.FC<{ children: ReactNode }> = ({ childre
   const [properties, setProperties] = useState<Property[]>(() => {
     try {
       const saved = localStorage.getItem(PROPERTIES_KEY);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
     } catch (e) {
       console.error(e);
     }
@@ -81,14 +84,19 @@ export const MarketplaceProvider: React.FC<{ children: ReactNode }> = ({ childre
   });
 
   useEffect(() => {
-    localStorage.setItem(PROPERTIES_KEY, JSON.stringify(properties));
+    if (properties && properties.length > 0) {
+      localStorage.setItem(PROPERTIES_KEY, JSON.stringify(properties));
+    }
   }, [properties]);
 
   // 2. Bookings
   const [bookings, setBookings] = useState<Booking[]>(() => {
     try {
       const saved = localStorage.getItem(BOOKINGS_KEY);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
     } catch (e) {
       console.error(e);
     }
@@ -96,14 +104,19 @@ export const MarketplaceProvider: React.FC<{ children: ReactNode }> = ({ childre
   });
 
   useEffect(() => {
-    localStorage.setItem(BOOKINGS_KEY, JSON.stringify(bookings));
+    if (bookings && bookings.length > 0) {
+      localStorage.setItem(BOOKINGS_KEY, JSON.stringify(bookings));
+    }
   }, [bookings]);
 
   // 3. Wishlist
   const [wishlistIds, setWishlistIds] = useState<string[]>(() => {
     try {
       const saved = localStorage.getItem(WISHLIST_KEY);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) return parsed;
+      }
     } catch (e) {
       console.error(e);
     }
@@ -223,12 +236,12 @@ export const MarketplaceProvider: React.FC<{ children: ReactNode }> = ({ childre
     checkOut: string,
     _guestsCount: number
   ): PriceBreakdown => {
-    const start = new Date(checkIn);
-    const end = new Date(checkOut);
+    const pricePerNight = property?.pricePerNight || 5000;
+    const start = new Date(checkIn || '2026-12-10');
+    const end = new Date(checkOut || '2026-12-14');
     const diffTime = Math.abs(end.getTime() - start.getTime());
-    const nights = Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
+    const nights = Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)) || 1);
 
-    const pricePerNight = property.pricePerNight;
     const baseTotal = pricePerNight * nights;
     const cleaningFee = commissionConfig.cleaningFeeDefault;
     const serviceFee = Math.round(baseTotal * commissionConfig.guestServiceFeeRate);

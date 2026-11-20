@@ -25,14 +25,32 @@ export const BookingConfirmationPage: React.FC = () => {
   const booking = bookings.find((b) => b.referenceNumber === reference) || bookings[0];
 
   useEffect(() => {
-    // Launch celebratory confetti animation on arrival
-    confetti({
-      particleCount: 80,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#173D32', '#2F7058', '#C5A66A', '#F8F7F1'],
-    });
-  }, []);
+    if (booking) {
+      // Launch celebratory confetti animation on arrival
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#173D32', '#2F7058', '#C5A66A', '#F8F7F1'],
+      });
+    }
+  }, [booking]);
+
+  if (!booking) {
+    return (
+      <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+        <Navbar />
+        <main className="flex-1 pt-32 pb-16 text-center max-w-md mx-auto px-4">
+          <h2 className="font-serif text-2xl font-bold text-[#173D32]">Reservation Not Found</h2>
+          <p className="text-xs text-stone-500 mt-2">No matching reservation was found.</p>
+          <Link to="/my-bookings" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#173D32] text-white text-xs font-semibold">
+            View My Reservations
+          </Link>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   const handlePrint = () => {
     window.print();

@@ -22,7 +22,7 @@ export const AdminDashboardPage: React.FC = () => {
 
   // Platform KPIs as required by Part 6.1
   const totalUsers = MOCK_USERS.length + 18; // base sample
-  const totalHosts = properties.reduce((acc, p) => acc.add(p.host.id), new Set()).size + 2;
+  const totalHosts = new Set(properties.map((p) => p?.host?.id).filter(Boolean)).size || 2;
   const totalProperties = properties.length;
   const pendingApprovals = pendingProperties.length;
   const totalReservations = bookings.length;

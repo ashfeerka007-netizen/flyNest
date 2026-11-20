@@ -42,12 +42,30 @@ export const PropertyDetailPage: React.FC = () => {
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
 
   const property = properties.find((p) => p.id === id) || properties[0];
-  const wishlisted = isWishlisted(property.id);
+  const wishlisted = property ? isWishlisted(property.id) : false;
 
   // Similar properties
-  const similarProperties = properties
-    .filter((p) => p.id !== property.id && (p.category === property.category || p.location.country === property.location.country))
-    .slice(0, 3);
+  const similarProperties = property
+    ? properties
+        .filter((p) => p.id !== property.id && (p.category === property.category || p.location.country === property.location.country))
+        .slice(0, 3)
+    : [];
+
+  if (!property) {
+    return (
+      <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+        <Navbar />
+        <main className="flex-1 pt-32 pb-16 text-center max-w-md mx-auto px-4">
+          <h2 className="font-serif text-2xl font-bold text-[#173D32]">Sanctuary Not Found</h2>
+          <p className="text-xs text-stone-500 mt-2">The requested accommodation could not be located along this corridor.</p>
+          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#173D32] text-white text-xs font-semibold">
+            Explore All Sanctuaries
+          </Link>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   // Amenity icon mapping
   const getAmenityDetails = (amenityKey: string) => {

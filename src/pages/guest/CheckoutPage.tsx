@@ -36,7 +36,23 @@ export const CheckoutPage: React.FC = () => {
   const checkOut = searchParams.get('checkOut') || '2026-12-14';
   const guestsCount = Number(searchParams.get('guests')) || 2;
 
-  const pricing = calculateBookingPrice(property, checkIn, checkOut, guestsCount);
+  const pricing = property ? calculateBookingPrice(property, checkIn, checkOut, guestsCount) : null;
+
+  if (!property || !pricing) {
+    return (
+      <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+        <Navbar />
+        <main className="flex-1 pt-32 pb-16 text-center max-w-md mx-auto px-4">
+          <h2 className="font-serif text-2xl font-bold text-[#173D32]">No Sanctuary Selected</h2>
+          <p className="text-xs text-stone-500 mt-2">Please select a sanctuary from our catalog before proceeding to checkout.</p>
+          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#173D32] text-white text-xs font-semibold">
+            Explore Sanctuaries
+          </Link>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   // Form State
   const [fullName, setFullName] = useState(currentUser?.name || 'Aarav Mehta');
