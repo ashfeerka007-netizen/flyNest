@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Minimalist migratory bird wing & nest sanctuary logo in Forest Green & Muted Gold -->
+  <circle cx="32" cy="32" r="30" fill="#173D32" />
+  <path d="M16 38 C 24 24, 34 20, 48 24 C 38 28, 30 36, 26 44 Z" fill="#C5A66A" />
+  <path d="M22 34 C 29 22, 38 18, 50 20 C 41 24, 34 32, 30 40 Z" fill="#FFFFFF" fill-opacity="0.9" />
+  <circle cx="27" cy="22" r="2.5" fill="#C5A66A" />
+</svg>
