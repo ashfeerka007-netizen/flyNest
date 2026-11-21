@@ -1,7 +1,49 @@
 import React from 'react';
 import { BRAND } from '../../config/brand';
 
-interface BrandLogoProps {
+export interface FlyNestSymbolProps {
+  className?: string;
+  variant?: 'light' | 'dark' | 'forest';
+  topFill?: string;
+  bottomFill?: string;
+}
+
+export const FlyNestSymbol: React.FC<FlyNestSymbolProps> = ({
+  className = 'w-full h-full',
+  variant = 'forest',
+  topFill,
+  bottomFill,
+}) => {
+  const isLight = variant === 'light';
+  const resolvedTop = topFill || '#F0A92E';
+  const resolvedBottom = bottomFill || (isLight ? '#FFFFFF' : '#1B1F4A');
+
+  return (
+    <svg
+      viewBox="0 0 256 256"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      role="img"
+      aria-label="FlyNest symbol"
+    >
+      <g transform="translate(0, 16)">
+        {/* Upper flight wing in golden amber */}
+        <path
+          fill={resolvedTop}
+          d="M128.00 41.83 L214.67 91.88 L200.67 116.12 L128.00 74.17 L55.33 116.12 L41.33 91.88 Z"
+        />
+        {/* Lower migratory flight flock chevrons */}
+        <path
+          fill={resolvedBottom}
+          d="M68.00 135.61 L121.00 166.21 L112.00 181.79 L68.00 156.39 L24.00 181.79 L15.00 166.21 Z M188.00 135.61 L241.00 166.21 L232.00 181.79 L188.00 156.39 L144.00 181.79 L135.00 166.21 Z"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export interface BrandLogoProps {
   variant?: 'light' | 'dark' | 'forest';
   size?: 'sm' | 'md' | 'lg';
   showTagline?: boolean;
@@ -18,8 +60,8 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   const isForest = variant === 'forest';
 
   const iconSizes = {
-    sm: 'w-7 h-7',
-    md: 'w-9 h-9',
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
     lg: 'w-12 h-12',
   };
 
@@ -31,36 +73,17 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   return (
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
-      {/* Bird Silhouette in Flight */}
+      {/* Brand Symbol Container */}
       <div
-        className={`${iconSizes[size]} relative flex items-center justify-center rounded-xl p-1.5 transition-transform duration-300 hover:scale-105 ${
+        className={`${iconSizes[size]} relative flex items-center justify-center rounded-xl p-1.5 transition-transform duration-300 hover:scale-105 shrink-0 ${
           isLight
-            ? 'bg-white/10 backdrop-blur-md text-[#C5A66A]'
+            ? 'bg-white/10 backdrop-blur-md border border-white/20'
             : isForest
-            ? 'bg-[#173D32] text-[#C5A66A] shadow-md shadow-[#173D32]/20'
-            : 'bg-[#252A27] text-[#C5A66A]'
+            ? 'bg-white shadow-xs border border-stone-200/90'
+            : 'bg-[#252A27] border border-stone-700'
         }`}
       >
-        <svg
-          viewBox="0 0 48 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full drop-shadow-sm"
-        >
-          {/* Main soaring bird wing arch */}
-          <path
-            d="M8 26C15 16 26 12 40 14C31 18 24 25 18 34C15 36 11 32 8 26Z"
-            fill="currentColor"
-          />
-          {/* Secondary flight wing */}
-          <path
-            d="M16 22C23 14 32 12 42 13C33 17 28 24 24 30C21 28 18 25 16 22Z"
-            fill={isLight ? '#FFFFFF' : '#2F7058'}
-            fillOpacity={0.85}
-          />
-          {/* Subtle sun or migratory point */}
-          <circle cx="21" cy="13" r="2" fill="#C5A66A" />
-        </svg>
+        <FlyNestSymbol variant={variant} />
       </div>
 
       <div className="flex flex-col">
@@ -72,7 +95,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           >
             {BRAND.name}
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#C5A66A]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#F0A92E]" />
         </div>
         {showTagline && (
           <span
