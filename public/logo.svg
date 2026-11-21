@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <!-- Minimalist migratory bird wing & nest sanctuary logo in Forest Green & Muted Gold -->
-  <circle cx="32" cy="32" r="30" fill="#173D32" />
-  <path d="M16 38 C 24 24, 34 20, 48 24 C 38 28, 30 36, 26 44 Z" fill="#C5A66A" />
-  <path d="M22 34 C 29 22, 38 18, 50 20 C 41 24, 34 32, 30 40 Z" fill="#FFFFFF" fill-opacity="0.9" />
-  <circle cx="27" cy="22" r="2.5" fill="#C5A66A" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 30 244 164" width="244" height="164" role="img" aria-labelledby="t">
+  <title id="t">FlyNest symbol</title>
+  <g>
+    <path fill="#F0A92E" d="M128.00 41.83 L214.67 91.88 L200.67 116.12 L128.00 74.17 L55.33 116.12 L41.33 91.88 Z"/>
+    <path fill="#1B1F4A" d="M68.00 135.61 L121.00 166.21 L112.00 181.79 L68.00 156.39 L24.00 181.79 L15.00 166.21 Z M188.00 135.61 L241.00 166.21 L232.00 181.79 L188.00 156.39 L144.00 181.79 L135.00 166.21 Z"/>
+  </g>
 </svg>
