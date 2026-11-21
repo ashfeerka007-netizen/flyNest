@@ -4,6 +4,7 @@ import { AdminLayout } from '../../components/admin/AdminLayout';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { useToast } from '../../context/ToastContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import {
   Building2,
   Search,
@@ -106,6 +107,7 @@ export const AdminPropertiesPage: React.FC = () => {
                           src={p.images[0]}
                           alt={p.title}
                           className="w-10 h-10 rounded-lg object-cover shrink-0"
+                          onError={handleImageError}
                         />
                         <div className="max-w-[200px]">
                           <Link to={`/property/${p.id}`} className="font-bold text-stone-800 hover:text-[#173D32] truncate block">

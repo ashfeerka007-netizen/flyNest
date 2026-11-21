@@ -9,6 +9,7 @@ import { MigrationPattern } from '../../components/common/MigrationPattern';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { TESTIMONIALS } from '../../data/mockReviews';
 import { BRAND } from '../../config/brand';
+import { handleImageError, handleAvatarError } from '../../utils/imageUtils';
 import {
   Compass,
   ArrowRight,
@@ -51,7 +52,7 @@ export const HomePage: React.FC = () => {
     {
       name: 'Coorg',
       tag: 'Coffee Estates',
-      image: 'https://images.unsplash.com/photo-1505873247407-88e404b9015c?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80',
       stays: '15 Sanctuaries',
     },
     {
@@ -172,6 +173,7 @@ export const HomePage: React.FC = () => {
                 src={dest.image}
                 alt={dest.name}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 text-white">
@@ -315,6 +317,7 @@ export const HomePage: React.FC = () => {
               src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
               alt="Become a Host"
               className="w-full h-80 object-cover"
+              onError={handleImageError}
             />
             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 to-transparent p-5 text-left">
               <p className="text-xs font-semibold text-[#C5A66A]">Average Host Earnings</p>
@@ -359,6 +362,7 @@ export const HomePage: React.FC = () => {
                     src={test.avatar}
                     alt={test.author}
                     className="w-10 h-10 rounded-full object-cover"
+                    onError={handleAvatarError}
                   />
                   <div>
                     <h4 className="text-xs font-bold text-[#173D32]">{test.author}</h4>

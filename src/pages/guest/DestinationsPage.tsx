@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navbar } from '../../components/guest/Navbar';
 import { Footer } from '../../components/guest/Footer';
 import { MapPin, ArrowRight, Compass } from 'lucide-react';
+import { handleImageError } from '../../utils/imageUtils';
 
 export const DestinationsPage: React.FC = () => {
   const destinations = [
@@ -27,7 +28,7 @@ export const DestinationsPage: React.FC = () => {
       state: 'Karnataka',
       country: 'India',
       description: 'Ancestral Kodava estates sheltered by silver oak trees and shade-grown coffee.',
-      image: 'https://images.unsplash.com/photo-1505873247407-88e404b9015c?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80',
       type: 'Coffee Plantations',
     },
     {
@@ -134,6 +135,7 @@ export const DestinationsPage: React.FC = () => {
                     src={d.image}
                     alt={d.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <span className="absolute bottom-3 left-3 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#173D32]/90 text-[#C5A66A]">

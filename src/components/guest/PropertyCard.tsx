@@ -4,6 +4,7 @@ import { Property } from '../../types/property';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { BRAND } from '../../config/brand';
 import { Heart, Star, MapPin, Users, Sparkles, Zap } from 'lucide-react';
+import { handleImageError } from '../../utils/imageUtils';
 
 interface PropertyCardProps {
   property: Property;
@@ -39,6 +40,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
             alt={property.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
+            onError={handleImageError}
           />
         </Link>
 

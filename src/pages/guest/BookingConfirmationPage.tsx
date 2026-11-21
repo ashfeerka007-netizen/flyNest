@@ -5,6 +5,7 @@ import { Navbar } from '../../components/guest/Navbar';
 import { Footer } from '../../components/guest/Footer';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import {
   CheckCircle2,
   Calendar,
@@ -97,6 +98,7 @@ export const BookingConfirmationPage: React.FC = () => {
                 src={booking.propertyImage}
                 alt={booking.propertyTitle}
                 className="w-full sm:w-36 h-36 rounded-2xl object-cover shrink-0"
+                onError={handleImageError}
               />
               <div className="flex-1 flex flex-col justify-between">
                 <div>

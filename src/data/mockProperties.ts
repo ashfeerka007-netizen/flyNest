@@ -127,7 +127,7 @@ export const MOCK_PROPERTIES: Property[] = [
     },
     category: 'Farm Stays',
     images: [
-      'https://images.unsplash.com/photo-1505873247407-88e404b9015c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',

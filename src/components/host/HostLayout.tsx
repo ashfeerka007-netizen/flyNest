@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BrandLogo } from '../common/BrandLogo';
 import { useAuth } from '../../context/AuthContext';
 import { useMarketplace } from '../../context/MarketplaceContext';
+import { handleAvatarError } from '../../utils/imageUtils';
 import {
   LayoutDashboard,
   Building,
@@ -90,6 +91,7 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
               src={currentUser?.avatar || 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80'}
               alt="Host"
               className="w-10 h-10 rounded-full object-cover border border-[#C5A66A]/60"
+              onError={handleAvatarError}
             />
             <div className="overflow-hidden">
               <div className="flex items-center gap-1">

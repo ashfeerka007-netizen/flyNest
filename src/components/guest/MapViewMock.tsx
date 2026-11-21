@@ -3,6 +3,7 @@ import { Property } from '../../types/property';
 import { BRAND } from '../../config/brand';
 import { Link } from 'react-router-dom';
 import { MapPin, Star, X, Compass, ExternalLink } from 'lucide-react';
+import { handleImageError } from '../../utils/imageUtils';
 
 interface MapViewMockProps {
   properties: Property[];
@@ -101,6 +102,7 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
               src={selectedProp.images[0]}
               alt={selectedProp.title}
               className="w-full h-full object-cover"
+              onError={handleImageError}
             />
             <span className="absolute top-2 left-2 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#173D32]/85 text-[#C5A66A]">
               {selectedProp.category}

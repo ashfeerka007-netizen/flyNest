@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BrandLogo } from '../common/BrandLogo';
 import { useAuth } from '../../context/AuthContext';
 import { useMarketplace } from '../../context/MarketplaceContext';
+import { handleAvatarError } from '../../utils/imageUtils';
 import {
   Heart,
   User as UserIcon,
@@ -148,6 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({ transparentAtTop = false }) => {
                     src={currentUser.avatar}
                     alt={currentUser.name}
                     className="w-7 h-7 rounded-full object-cover"
+                    onError={handleAvatarError}
                   />
                   <span className="text-xs font-medium max-w-[80px] truncate hidden md:inline">
                     {currentUser.name.split(' ')[0]}

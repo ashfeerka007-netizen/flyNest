@@ -6,6 +6,7 @@ import { useMarketplace } from '../../context/MarketplaceContext';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import { PaymentMethodType, GuestDetails, PaymentDetails } from '../../types/booking';
 import {
   CreditCard,
@@ -452,6 +453,7 @@ export const CheckoutPage: React.FC = () => {
                     src={property.images[0]}
                     alt={property.title}
                     className="w-24 h-24 rounded-2xl object-cover shrink-0"
+                    onError={handleImageError}
                   />
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#C5A66A] bg-[#173D32] px-2 py-0.5 rounded-md">

@@ -6,6 +6,7 @@ import { BookingPanel } from '../../components/guest/BookingPanel';
 import { PropertyCard } from '../../components/guest/PropertyCard';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError, handleAvatarError } from '../../utils/imageUtils';
 import {
   Star,
   MapPin,
@@ -183,6 +184,7 @@ export const PropertyDetailPage: React.FC = () => {
                 src={property.images[0]}
                 alt={property.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
             </div>
@@ -202,6 +204,7 @@ export const PropertyDetailPage: React.FC = () => {
                     src={img}
                     alt={`${property.title} view ${idx + 2}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={handleImageError}
                   />
                   {idx === 3 && property.images.length > 5 && (
                     <div className="absolute inset-0 bg-black/50 backdrop-blur-xs flex items-center justify-center text-white font-semibold text-sm">
@@ -223,6 +226,7 @@ export const PropertyDetailPage: React.FC = () => {
                   src={property.host.avatar}
                   alt={property.host.name}
                   className="w-14 h-14 rounded-full object-cover border-2 border-[#C5A66A]"
+                  onError={handleAvatarError}
                 />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
@@ -344,6 +348,7 @@ export const PropertyDetailPage: React.FC = () => {
                     src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"
                     alt="Map Location"
                     className="w-full h-full object-cover filter contrast-125 opacity-70"
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-[#173D32]/30 flex items-center justify-center">
                     <div className="bg-white/95 px-4 py-2 rounded-full shadow-xl border border-stone-200 flex items-center gap-2 text-xs font-bold text-[#173D32]">
@@ -395,6 +400,7 @@ export const PropertyDetailPage: React.FC = () => {
               src={property.images[activePhotoIndex]}
               alt={`Full view ${activePhotoIndex + 1}`}
               className="max-h-[75vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl"
+              onError={handleImageError}
             />
           </div>
 
@@ -407,7 +413,7 @@ export const PropertyDetailPage: React.FC = () => {
                   activePhotoIndex === i ? 'border-[#C5A66A] scale-105' : 'border-transparent opacity-60'
                 }`}
               >
-                <img src={img} alt="thumb" className="w-full h-full object-cover" />
+                <img src={img} alt="thumb" className="w-full h-full object-cover" onError={handleImageError} />
               </button>
             ))}
           </div>

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BrandLogo } from '../common/BrandLogo';
 import { useAuth } from '../../context/AuthContext';
 import { useMarketplace } from '../../context/MarketplaceContext';
+import { handleAvatarError } from '../../utils/imageUtils';
 import {
   ShieldAlert,
   Users,
@@ -96,6 +97,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
               src={currentUser?.avatar || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80'}
               alt="Admin"
               className="w-10 h-10 rounded-full object-cover border border-[#C5A66A]/60"
+              onError={handleAvatarError}
             />
             <div className="overflow-hidden">
               <div className="flex items-center gap-1">

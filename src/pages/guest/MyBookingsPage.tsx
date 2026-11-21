@@ -5,6 +5,7 @@ import { Footer } from '../../components/guest/Footer';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { useToast } from '../../context/ToastContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import { Booking } from '../../types/booking';
 import {
   Calendar,
@@ -86,6 +87,7 @@ export const MyBookingsPage: React.FC = () => {
                     src={b.propertyImage}
                     alt={b.propertyTitle}
                     className="w-full md:w-52 h-44 rounded-2xl object-cover shrink-0"
+                    onError={handleImageError}
                   />
 
                   <div className="flex-1 flex flex-col justify-between h-full w-full">

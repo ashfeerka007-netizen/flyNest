@@ -1,6 +1,7 @@
 import React from 'react';
 import { HostLayout } from '../../components/host/HostLayout';
 import { Star, MessageSquare } from 'lucide-react';
+import { handleAvatarError } from '../../utils/imageUtils';
 
 export const HostReviewsPage: React.FC = () => {
   const reviews = [
@@ -38,7 +39,7 @@ export const HostReviewsPage: React.FC = () => {
             <div key={rev.id} className="bg-white p-6 rounded-3xl border border-stone-200 shadow-xs space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <img src={rev.avatar} alt={rev.guest} className="w-10 h-10 rounded-full object-cover" />
+                  <img src={rev.avatar} alt={rev.guest} className="w-10 h-10 rounded-full object-cover" onError={handleAvatarError} />
                   <div>
                     <h4 className="font-bold text-sm text-[#173D32]">{rev.guest}</h4>
                     <p className="text-[10px] text-stone-400">{rev.property} • {rev.date}</p>

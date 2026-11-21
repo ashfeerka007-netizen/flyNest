@@ -4,6 +4,7 @@ import { MOCK_USERS } from '../../data/mockUsers';
 import { useToast } from '../../context/ToastContext';
 import { User } from '../../types/user';
 import { Users, Search, ShieldCheck, UserX, Check, AlertCircle } from 'lucide-react';
+import { handleAvatarError } from '../../utils/imageUtils';
 
 export const AdminUsersPage: React.FC = () => {
   const [users, setUsers] = useState<User[]>(MOCK_USERS);
@@ -106,6 +107,7 @@ export const AdminUsersPage: React.FC = () => {
                           src={u.avatar}
                           alt={u.name}
                           className="w-9 h-9 rounded-full object-cover shrink-0"
+                          onError={handleAvatarError}
                         />
                         <div>
                           <p className="font-bold text-stone-800">{u.name}</p>

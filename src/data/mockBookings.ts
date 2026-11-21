@@ -90,7 +90,7 @@ export const MOCK_BOOKINGS: Booking[] = [
     referenceNumber: 'FN-2026-7723',
     propertyId: 'prop-coorg-plantation',
     propertyTitle: 'Arabica Shade Heritage Plantation Estate',
-    propertyImage: 'https://images.unsplash.com/photo-1505873247407-88e404b9015c?auto=format&fit=crop&w=800&q=80',
+    propertyImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80',
     propertyCategory: 'Farm Stays',
     propertyLocation: 'Coorg, Karnataka, India',
     hostId: 'user-host-1',

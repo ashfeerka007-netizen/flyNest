@@ -4,6 +4,7 @@ import { AdminLayout } from '../../components/admin/AdminLayout';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { MOCK_USERS } from '../../data/mockUsers';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import {
   Users,
   Building,
@@ -153,6 +154,7 @@ export const AdminDashboardPage: React.FC = () => {
                         src={p.images[0]}
                         alt={p.title}
                         className="w-12 h-12 rounded-xl object-cover"
+                        onError={handleImageError}
                       />
                       <div>
                         <h4 className="font-bold text-xs text-[#173D32]">{p.title}</h4>

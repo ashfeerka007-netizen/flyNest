@@ -4,6 +4,7 @@ import { Navbar } from '../../components/guest/Navbar';
 import { Footer } from '../../components/guest/Footer';
 import { useAuth } from '../../context/AuthContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import { MigrationPattern } from '../../components/common/MigrationPattern';
 import { Sparkles, DollarSign, ShieldCheck, HeartHandshake, ArrowRight, Check } from 'lucide-react';
 
@@ -60,6 +61,7 @@ export const BecomeAHostPage: React.FC = () => {
                 src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
                 alt="Sanctuary Hosting"
                 className="w-full h-80 object-cover"
+                onError={handleImageError}
               />
             </div>
           </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { HostLayout } from '../../components/host/HostLayout';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import {
   PlusCircle,
   ExternalLink,
@@ -58,6 +59,7 @@ export const HostPropertiesPage: React.FC = () => {
                     src={p.images[0]}
                     alt={p.title}
                     className="w-full h-full object-cover"
+                    onError={handleImageError}
                   />
                   {/* Status Badge */}
                   <div className="absolute top-3 left-3">

@@ -4,6 +4,7 @@ import { Footer } from '../../components/guest/Footer';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import { BRAND } from '../../config/brand';
+import { handleAvatarError } from '../../utils/imageUtils';
 import { User, Mail, Phone, MapPin, ShieldCheck, Save, Sparkles } from 'lucide-react';
 
 export const GuestAccountPage: React.FC = () => {
@@ -46,6 +47,7 @@ export const GuestAccountPage: React.FC = () => {
                 src={currentUser?.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'}
                 alt={name}
                 className="w-20 h-20 rounded-full object-cover border-2 border-[#C5A66A]"
+                onError={handleAvatarError}
               />
               <div>
                 <h3 className="font-serif text-lg font-bold text-[#173D32] flex items-center gap-2">

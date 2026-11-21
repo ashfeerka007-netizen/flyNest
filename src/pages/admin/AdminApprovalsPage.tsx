@@ -4,6 +4,7 @@ import { AdminLayout } from '../../components/admin/AdminLayout';
 import { useMarketplace } from '../../context/MarketplaceContext';
 import { useToast } from '../../context/ToastContext';
 import { BRAND } from '../../config/brand';
+import { handleImageError } from '../../utils/imageUtils';
 import {
   CheckCircle2,
   XCircle,
@@ -64,6 +65,7 @@ export const AdminApprovalsPage: React.FC = () => {
                     src={p.images[0]}
                     alt={p.title}
                     className="w-full sm:w-56 h-48 rounded-2xl object-cover shrink-0"
+                    onError={handleImageError}
                   />
 
                   <div className="space-y-2">
