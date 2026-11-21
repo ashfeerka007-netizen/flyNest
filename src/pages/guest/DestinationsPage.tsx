@@ -106,16 +106,16 @@ export const DestinationsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
           <div className="mb-12 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
               Migratory Corridors
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#1B1F4A] mt-1">
               Curated Destinations
             </h1>
             <p className="text-sm text-stone-600 mt-2 leading-relaxed">
@@ -138,17 +138,17 @@ export const DestinationsPage: React.FC = () => {
                     onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <span className="absolute bottom-3 left-3 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#173D32]/90 text-[#C5A66A]">
+                  <span className="absolute bottom-3 left-3 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#1B1F4A]/90 text-[#F0A92E]">
                     {d.type}
                   </span>
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-[#173D32] group-hover:text-[#2F7058] transition-colors">
+                    <h3 className="font-serif text-xl font-bold text-[#1B1F4A] group-hover:text-[#5B6BD6] transition-colors">
                       {d.name}
                     </h3>
-                    <p className="text-xs text-[#2F7058] font-medium mt-0.5">
+                    <p className="text-xs text-[#5B6BD6] font-medium mt-0.5">
                       {d.state ? `${d.state}, ` : ''}{d.country}
                     </p>
                     <p className="text-xs text-stone-500 mt-3 leading-relaxed">
@@ -156,9 +156,9 @@ export const DestinationsPage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-[#173D32]">
+                  <div className="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-[#1B1F4A]">
                     <span>Explore Sanctuaries</span>
-                    <ArrowRight className="w-4 h-4 text-[#C5A66A] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-[#F0A92E] group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>

@@ -28,7 +28,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
 
   return (
     <div
-      className={`group bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-xl hover:border-[#2F7058]/40 transition-all duration-300 flex flex-col ${
+      className={`group bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-xl hover:border-[#5B6BD6]/40 transition-all duration-300 flex flex-col ${
         isList ? 'md:flex-row' : ''
       }`}
     >
@@ -49,12 +49,12 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
 
         {/* Top Badges */}
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10 pointer-events-none">
-          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#173D32]/85 text-[#C5A66A] backdrop-blur-md border border-[#C5A66A]/30">
+          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#1B1F4A]/85 text-[#F0A92E] backdrop-blur-md border border-[#F0A92E]/30">
             {property.category}
           </span>
           {property.host.isSuperhost && (
-            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/90 text-[#173D32] backdrop-blur-md flex items-center gap-1">
-              <Sparkles className="w-2.5 h-2.5 text-[#C5A66A]" /> Superhost
+            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/90 text-[#1B1F4A] backdrop-blur-md flex items-center gap-1">
+              <Sparkles className="w-2.5 h-2.5 text-[#F0A92E]" /> Superhost
             </span>
           )}
         </div>
@@ -76,7 +76,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
         {property.instantBookable && (
           <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
             <span className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-emerald-950/80 text-emerald-300 backdrop-blur-xs flex items-center gap-1 border border-emerald-500/30">
-              <Zap className="w-2.5 h-2.5 text-[#C5A66A]" /> Instant Book
+              <Zap className="w-2.5 h-2.5 text-[#F0A92E]" /> Instant Book
             </span>
           </div>
         )}
@@ -87,11 +87,11 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
         <div>
           {/* Location & Rating */}
           <div className="flex items-center justify-between text-xs text-stone-500 mb-1.5">
-            <span className="flex items-center gap-1 text-[#2F7058] font-medium truncate max-w-[200px]">
+            <span className="flex items-center gap-1 text-[#5B6BD6] font-medium truncate max-w-[200px]">
               <MapPin className="w-3.5 h-3.5 shrink-0" />
               <span>{property.location.city}, {property.location.country}</span>
             </span>
-            <span className="flex items-center gap-1 font-semibold text-[#252A27]">
+            <span className="flex items-center gap-1 font-semibold text-[#1B1F4A]">
               <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
               <span>{property.rating}</span>
               <span className="text-stone-400 font-normal">({property.reviewCount})</span>
@@ -99,8 +99,8 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
 
           {/* Property Title */}
-          <Link to={`/property/${property.id}`} className="block group-hover:text-[#2F7058] transition-colors">
-            <h3 className="font-serif text-base sm:text-lg font-bold text-[#173D32] line-clamp-1">
+          <Link to={`/property/${property.id}`} className="block group-hover:text-[#5B6BD6] transition-colors">
+            <h3 className="font-serif text-base sm:text-lg font-bold text-[#1B1F4A] line-clamp-1">
               {property.title}
             </h3>
           </Link>
@@ -126,7 +126,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
         {/* Price & Action */}
         <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
           <div className="flex items-baseline gap-1.5">
-            <span className="text-base sm:text-lg font-bold text-[#173D32]">
+            <span className="text-base sm:text-lg font-bold text-[#1B1F4A]">
               {BRAND.currency.symbol}{property.pricePerNight.toLocaleString()}
             </span>
             <span className="text-xs text-stone-400">/ night</span>
@@ -139,7 +139,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
 
           <Link
             to={`/property/${property.id}`}
-            className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#173D32]/5 hover:bg-[#173D32] text-[#173D32] hover:text-white transition-all"
+            className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#1B1F4A]/5 hover:bg-[#1B1F4A] text-[#1B1F4A] hover:text-white transition-all"
           >
             Explore Stay →
           </Link>

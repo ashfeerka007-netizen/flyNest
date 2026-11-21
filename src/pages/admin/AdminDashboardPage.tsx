@@ -49,7 +49,7 @@ export const AdminDashboardPage: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider text-purple-700">
               System Health & Governance
             </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               Platform Administration Dashboard
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -72,19 +72,19 @@ export const AdminDashboardPage: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Total Users</span>
-            <p className="text-2xl font-bold text-[#173D32] mt-1">{totalUsers}</p>
+            <p className="text-2xl font-bold text-[#1B1F4A] mt-1">{totalUsers}</p>
             <span className="text-[10px] text-emerald-600 font-medium">+14 this week</span>
           </div>
 
           <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Total Hosts</span>
-            <p className="text-2xl font-bold text-[#173D32] mt-1">{totalHosts}</p>
+            <p className="text-2xl font-bold text-[#1B1F4A] mt-1">{totalHosts}</p>
             <span className="text-[10px] text-stone-500">Verified custodians</span>
           </div>
 
           <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Total Properties</span>
-            <p className="text-2xl font-bold text-[#173D32] mt-1">{totalProperties}</p>
+            <p className="text-2xl font-bold text-[#1B1F4A] mt-1">{totalProperties}</p>
             <span className="text-[10px] text-stone-500">Global sanctuaries</span>
           </div>
 
@@ -96,7 +96,7 @@ export const AdminDashboardPage: React.FC = () => {
 
           <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Total Bookings</span>
-            <p className="text-2xl font-bold text-[#173D32] mt-1">{totalReservations}</p>
+            <p className="text-2xl font-bold text-[#1B1F4A] mt-1">{totalReservations}</p>
             <span className="text-[10px] text-stone-500">Across platform</span>
           </div>
 
@@ -108,7 +108,7 @@ export const AdminDashboardPage: React.FC = () => {
 
           <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Gross Booking Value</span>
-            <p className="text-xl font-bold text-[#173D32] mt-1 font-serif">
+            <p className="text-xl font-bold text-[#1B1F4A] mt-1 font-serif">
               ₹{grossBookingValue.toLocaleString()}
             </p>
             <span className="text-[10px] text-stone-500">Simulated transactions</span>
@@ -129,14 +129,14 @@ export const AdminDashboardPage: React.FC = () => {
           <div className="lg:col-span-2 bg-white rounded-3xl p-6 border border-stone-200 shadow-xs">
             <div className="flex items-center justify-between pb-4 border-b border-stone-100 mb-4">
               <div>
-                <h3 className="font-serif text-base font-bold text-[#173D32]">
+                <h3 className="font-serif text-base font-bold text-[#1B1F4A]">
                   Awaiting Verification & Approvals
                 </h3>
                 <p className="text-xs text-stone-400">Host properties submitted awaiting public launch</p>
               </div>
               <Link
                 to="/admin/approvals"
-                className="text-xs font-bold text-[#2F7058] hover:underline flex items-center gap-1"
+                className="text-xs font-bold text-[#5B6BD6] hover:underline flex items-center gap-1"
               >
                 <span>Approvals Console →</span>
               </Link>
@@ -157,7 +157,7 @@ export const AdminDashboardPage: React.FC = () => {
                         onError={handleImageError}
                       />
                       <div>
-                        <h4 className="font-bold text-xs text-[#173D32]">{p.title}</h4>
+                        <h4 className="font-bold text-xs text-[#1B1F4A]">{p.title}</h4>
                         <p className="text-[10px] text-stone-500">{p.category} • {p.destination} • ₹{p.pricePerNight}/night</p>
                         <p className="text-[10px] text-stone-400">Host: {p.host.name}</p>
                       </div>
@@ -165,7 +165,7 @@ export const AdminDashboardPage: React.FC = () => {
 
                     <Link
                       to="/admin/approvals"
-                      className="px-3 py-1.5 rounded-xl bg-[#173D32] text-white text-xs font-semibold hover:bg-[#2F7058] transition-colors shrink-0"
+                      className="px-3 py-1.5 rounded-xl bg-[#1B1F4A] text-white text-xs font-semibold hover:bg-[#5B6BD6] transition-colors shrink-0"
                     >
                       Review & Approve
                     </Link>
@@ -182,7 +182,7 @@ export const AdminDashboardPage: React.FC = () => {
 
           {/* Category Distribution (1 col) */}
           <div className="bg-white rounded-3xl p-6 border border-stone-200 shadow-xs">
-            <h3 className="font-serif text-base font-bold text-[#173D32] mb-1">
+            <h3 className="font-serif text-base font-bold text-[#1B1F4A] mb-1">
               Category Distribution
             </h3>
             <p className="text-xs text-stone-400 mb-6">Marketplace inventory by stay type</p>
@@ -192,11 +192,11 @@ export const AdminDashboardPage: React.FC = () => {
                 <div key={item.cat} className="space-y-1">
                   <div className="flex justify-between font-medium">
                     <span className="text-stone-700">{item.cat}</span>
-                    <span className="font-bold text-[#173D32]">{item.count} stays</span>
+                    <span className="font-bold text-[#1B1F4A]">{item.count} stays</span>
                   </div>
                   <div className="w-full h-2 bg-stone-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-[#173D32]"
+                      className="h-full bg-[#1B1F4A]"
                       style={{ width: `${(item.count / totalProperties) * 100}%` }}
                     />
                   </div>

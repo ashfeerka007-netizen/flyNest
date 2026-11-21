@@ -13,7 +13,7 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
   const [selectedProp, setSelectedProp] = useState<Property | null>(properties[0] || null);
 
   return (
-    <div className="relative w-full h-[650px] bg-[#173D32] rounded-3xl overflow-hidden border border-[#2F7058]/50 shadow-xl">
+    <div className="relative w-full h-[650px] bg-[#1B1F4A] rounded-3xl overflow-hidden border border-[#5B6BD6]/50 shadow-xl">
       {/* Stylized Topo / Satellite Map Background */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity filter contrast-125"
@@ -30,7 +30,7 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
       >
         <path
           d="M 50 150 Q 300 50 600 300 T 1100 200"
-          stroke="#C5A66A"
+          stroke="#F0A92E"
           strokeWidth="2"
           strokeDasharray="6 6"
           fill="none"
@@ -45,8 +45,8 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
       </svg>
 
       {/* Map Control Pill Top Left */}
-      <div className="absolute top-5 left-5 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-stone-200 shadow-md flex items-center gap-2 text-xs font-semibold text-[#173D32]">
-        <Compass className="w-4 h-4 text-[#C5A66A] animate-spin" style={{ animationDuration: '20s' }} />
+      <div className="absolute top-5 left-5 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-stone-200 shadow-md flex items-center gap-2 text-xs font-semibold text-[#1B1F4A]">
+        <Compass className="w-4 h-4 text-[#F0A92E] animate-spin" style={{ animationDuration: '20s' }} />
         <span>Migratory Corridor Map • {properties.length} Active Sanctuaries</span>
       </div>
 
@@ -80,11 +80,11 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
               <div
                 className={`px-3 py-1.5 rounded-full font-bold text-xs shadow-lg flex items-center gap-1.5 transition-colors border ${
                   isSelected
-                    ? 'bg-[#C5A66A] text-[#173D32] border-white scale-105'
-                    : 'bg-[#173D32] text-white hover:bg-[#2F7058] border-[#C5A66A]/40'
+                    ? 'bg-[#F0A92E] text-[#1B1F4A] border-white scale-105'
+                    : 'bg-[#1B1F4A] text-white hover:bg-[#5B6BD6] border-[#F0A92E]/40'
                 }`}
               >
-                <MapPin className="w-3 h-3 text-[#C5A66A]" />
+                <MapPin className="w-3 h-3 text-[#F0A92E]" />
                 <span>
                   {BRAND.currency.symbol}{Math.round(prop.pricePerNight / 1000)}k
                 </span>
@@ -104,7 +104,7 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
               className="w-full h-full object-cover"
               onError={handleImageError}
             />
-            <span className="absolute top-2 left-2 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#173D32]/85 text-[#C5A66A]">
+            <span className="absolute top-2 left-2 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#1B1F4A]/85 text-[#F0A92E]">
               {selectedProp.category}
             </span>
           </div>
@@ -120,10 +120,10 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
                   <X className="w-3.5 h-3.5" />
                 </button>
               </div>
-              <h4 className="font-serif text-sm font-bold text-[#173D32] line-clamp-1">
+              <h4 className="font-serif text-sm font-bold text-[#1B1F4A] line-clamp-1">
                 {selectedProp.title}
               </h4>
-              <div className="flex items-center gap-1 text-xs font-semibold text-[#252A27] mt-1">
+              <div className="flex items-center gap-1 text-xs font-semibold text-[#1B1F4A] mt-1">
                 <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
                 <span>{selectedProp.rating}</span>
                 <span className="text-stone-400 font-normal">({selectedProp.reviewCount} reviews)</span>
@@ -131,14 +131,14 @@ export const MapViewMock: React.FC<MapViewMockProps> = ({ properties }) => {
             </div>
 
             <div className="mt-2 pt-2 border-t border-stone-100 flex items-center justify-between">
-              <span className="text-sm font-bold text-[#173D32]">
+              <span className="text-sm font-bold text-[#1B1F4A]">
                 {BRAND.currency.symbol}{selectedProp.pricePerNight.toLocaleString()}
                 <span className="text-[10px] text-stone-400 font-normal"> / night</span>
               </span>
 
               <Link
                 to={`/property/${selectedProp.id}`}
-                className="text-[11px] font-semibold text-[#173D32] hover:text-[#2F7058] flex items-center gap-1 bg-[#173D32]/5 px-2.5 py-1 rounded-lg"
+                className="text-[11px] font-semibold text-[#1B1F4A] hover:text-[#5B6BD6] flex items-center gap-1 bg-[#1B1F4A]/5 px-2.5 py-1 rounded-lg"
               >
                 <span>View Details</span>
                 <ExternalLink className="w-3 h-3" />

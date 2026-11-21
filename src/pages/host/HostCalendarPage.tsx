@@ -57,10 +57,10 @@ export const HostCalendarPage: React.FC = () => {
         {/* Header & Controls */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-stone-200">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#5B6BD6]">
               Interactive Availability & Rates
             </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               Sanctuary Availability Calendar
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -89,8 +89,8 @@ export const HostCalendarPage: React.FC = () => {
           {/* Month Header */}
           <div className="flex items-center justify-between pb-6 border-b border-stone-100">
             <div className="flex items-center gap-2">
-              <CalendarIcon className="w-5 h-5 text-[#C5A66A]" />
-              <h3 className="font-serif text-xl font-bold text-[#173D32]">{currentMonth}</h3>
+              <CalendarIcon className="w-5 h-5 text-[#F0A92E]" />
+              <h3 className="font-serif text-xl font-bold text-[#1B1F4A]">{currentMonth}</h3>
             </div>
 
             <div className="flex items-center gap-4 text-xs">
@@ -150,7 +150,7 @@ export const HostCalendarPage: React.FC = () => {
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <span className={`text-xs font-bold ${isBlocked ? 'text-stone-400' : 'text-[#173D32]'}`}>
+                      <span className={`text-xs font-bold ${isBlocked ? 'text-stone-400' : 'text-[#1B1F4A]'}`}>
                         {day}
                       </span>
                       {isBooked ? (
@@ -165,7 +165,7 @@ export const HostCalendarPage: React.FC = () => {
                     </div>
 
                     <div className="flex items-baseline justify-between">
-                      <span className="text-[11px] font-semibold text-[#173D32]">
+                      <span className="text-[11px] font-semibold text-[#1B1F4A]">
                         ₹{activePrice.toLocaleString()}
                       </span>
 
@@ -177,7 +177,7 @@ export const HostCalendarPage: React.FC = () => {
                             setEditingRateDate(dateStr);
                             setNewRate(activePrice);
                           }}
-                          className="opacity-0 group-hover:opacity-100 p-1 rounded-md text-stone-500 hover:text-[#173D32] hover:bg-white text-[10px]"
+                          className="opacity-0 group-hover:opacity-100 p-1 rounded-md text-stone-500 hover:text-[#1B1F4A] hover:bg-white text-[10px]"
                           title="Custom Rate"
                         >
                           <Edit className="w-3 h-3" />
@@ -195,7 +195,7 @@ export const HostCalendarPage: React.FC = () => {
         {editingRateDate && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
             <div className="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-stone-200 animate-scale-up text-left">
-              <h3 className="font-serif text-lg font-bold text-[#173D32]">
+              <h3 className="font-serif text-lg font-bold text-[#1B1F4A]">
                 Configure Nightly Rate
               </h3>
               <p className="text-xs text-stone-500 mt-1">
@@ -227,7 +227,7 @@ export const HostCalendarPage: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 text-xs font-semibold bg-[#173D32] text-white rounded-xl shadow-xs"
+                    className="px-4 py-2 text-xs font-semibold bg-[#1B1F4A] text-white rounded-xl shadow-xs"
                   >
                     Save Rate
                   </button>

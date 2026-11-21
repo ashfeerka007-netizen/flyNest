@@ -27,14 +27,14 @@ export const HostLoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col justify-center items-center p-4 text-left">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col justify-center items-center p-4 text-left">
       <div className="max-w-md w-full bg-white rounded-3xl p-8 border border-stone-200 shadow-xl">
         <div className="text-center mb-6">
           <BrandLogo size="md" />
           <span className="inline-block mt-3 px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-300 text-[10px] font-bold uppercase tracking-wider">
             Host Workspace Portal
           </span>
-          <h2 className="font-serif text-2xl font-bold text-[#173D32] mt-2">
+          <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mt-2">
             Sanctuary Host Sign In
           </h2>
           <p className="text-xs text-stone-500 mt-1">
@@ -46,7 +46,7 @@ export const HostLoginPage: React.FC = () => {
         <div className="mb-6 p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-amber-900 flex items-center gap-1.5 uppercase tracking-wider">
-              <Key className="w-3.5 h-3.5 text-[#C5A66A]" /> Demo Host Access
+              <Key className="w-3.5 h-3.5 text-[#F0A92E]" /> Demo Host Access
             </span>
             <span className="text-[10px] font-mono bg-white px-2 py-0.5 rounded border border-amber-200">
               demo123
@@ -58,9 +58,9 @@ export const HostLoginPage: React.FC = () => {
           <button
             type="button"
             onClick={handleQuickFill}
-            className="w-full bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold py-2.5 px-4 rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold py-2.5 px-4 rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
-            <Home className="w-3.5 h-3.5 text-[#C5A66A]" />
+            <Home className="w-3.5 h-3.5 text-[#F0A92E]" />
             <span>Sign In as Demo Host ({DEMO_CREDENTIALS.host.email})</span>
           </button>
         </div>
@@ -73,7 +73,7 @@ export const HostLoginPage: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
             />
           </div>
 
@@ -84,13 +84,13 @@ export const HostLoginPage: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#2F7058] hover:bg-[#173D32] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer mt-2"
+            className="w-full bg-[#5B6BD6] hover:bg-[#1B1F4A] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer mt-2"
           >
             <span>Log In to Host Portal</span>
             <ArrowRight className="w-4 h-4" />
@@ -98,7 +98,7 @@ export const HostLoginPage: React.FC = () => {
         </form>
 
         <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500">
-          <Link to="/" className="hover:text-[#173D32]">← Public Guest Site</Link>
+          <Link to="/" className="hover:text-[#1B1F4A]">← Public Guest Site</Link>
           <Link to="/admin/login" className="text-purple-700 hover:underline">Admin Login →</Link>
         </div>
       </div>

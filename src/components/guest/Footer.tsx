@@ -20,14 +20,14 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-[#173D32] text-white pt-16 pb-12 overflow-hidden border-t border-[#2F7058]/40">
+    <footer className="relative bg-[#1B1F4A] text-white pt-16 pb-12 overflow-hidden border-t border-[#5B6BD6]/40">
       <MigrationPattern opacity={0.08} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Newsletter Section */}
-        <div className="bg-[#2F7058]/30 rounded-3xl p-8 sm:p-12 mb-16 border border-[#2F7058]/50 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div className="bg-[#5B6BD6]/30 rounded-3xl p-8 sm:p-12 mb-16 border border-[#5B6BD6]/50 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="max-w-xl">
-            <span className="text-[#C5A66A] text-xs font-semibold tracking-widest uppercase">
+            <span className="text-[#F0A92E] text-xs font-semibold tracking-widest uppercase">
               The Migratory Journal
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold mt-2 text-white">
@@ -48,12 +48,12 @@ export const Footer: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
                   required
-                  className="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-11 pr-4 text-sm text-white placeholder-stone-400 focus:outline-hidden focus:ring-2 focus:ring-[#C5A66A] focus:border-transparent transition-all"
+                  className="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-11 pr-4 text-sm text-white placeholder-stone-400 focus:outline-hidden focus:ring-2 focus:ring-[#F0A92E] focus:border-transparent transition-all"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-[#C5A66A] hover:bg-[#b09257] text-[#173D32] font-semibold text-sm px-6 py-3 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-black/20"
+                className="bg-[#F0A92E] hover:bg-[#b09257] text-[#1B1F4A] font-semibold text-sm px-6 py-3 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-black/20"
               >
                 <span>{subscribed ? 'Subscribed' : 'Join Journey'}</span>
                 <ArrowRight className="w-4 h-4" />
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex items-center gap-3 mt-6 text-xs text-stone-300">
               <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full">
-                <Globe className="w-3.5 h-3.5 text-[#C5A66A]" />
+                <Globe className="w-3.5 h-3.5 text-[#F0A92E]" />
                 <span>India & International</span>
               </span>
               <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full">
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
 
           {/* Destinations */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#C5A66A] mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#F0A92E] mb-4">
               Destinations
             </h4>
             <ul className="space-y-2.5 text-sm text-stone-300">
@@ -102,7 +102,7 @@ export const Footer: React.FC = () => {
 
           {/* Categories */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#C5A66A] mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#F0A92E] mb-4">
               Sanctuary Types
             </h4>
             <ul className="space-y-2.5 text-sm text-stone-300">
@@ -117,7 +117,7 @@ export const Footer: React.FC = () => {
 
           {/* Platform & Portals */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#C5A66A] mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#F0A92E] mb-4">
               Explore & Host
             </h4>
             <ul className="space-y-2.5 text-sm text-stone-300">
@@ -126,7 +126,7 @@ export const Footer: React.FC = () => {
               <li><Link to="/about" className="hover:text-white transition-colors">Our Ethical Ethos</Link></li>
               <li><Link to="/help" className="hover:text-white transition-colors">Concierge & Help</Link></li>
               <li className="pt-2 border-t border-white/10">
-                <Link to="/host/login" className="text-[#C5A66A] hover:underline font-medium">Host Portal Demo →</Link>
+                <Link to="/host/login" className="text-[#F0A92E] hover:underline font-medium">Host Portal Demo →</Link>
               </li>
               <li>
                 <Link to="/admin/login" className="text-stone-400 hover:text-stone-200 text-xs">Admin Platform Demo →</Link>

@@ -22,13 +22,13 @@ export const RegisterPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col justify-center items-center p-4">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col justify-center items-center p-4">
       <div className="max-w-md w-full bg-white rounded-3xl p-8 border border-stone-200/90 shadow-xl text-left">
         <div className="text-center mb-6">
           <Link to="/" className="inline-block">
             <BrandLogo size="md" showTagline={true} />
           </Link>
-          <h2 className="font-serif text-2xl font-bold text-[#173D32] mt-4">
+          <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mt-4">
             Begin Your Migratory Journey
           </h2>
           <p className="text-xs text-stone-500 mt-1">
@@ -45,7 +45,7 @@ export const RegisterPage: React.FC = () => {
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Maya Iyer"
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
             />
           </div>
 
@@ -57,7 +57,7 @@ export const RegisterPage: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="maya@example.com"
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
             />
           </div>
 
@@ -69,13 +69,13 @@ export const RegisterPage: React.FC = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer mt-2"
+            className="w-full bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer mt-2"
           >
             <span>Create Sanctuary Passport</span>
             <ArrowRight className="w-4 h-4" />
@@ -84,7 +84,7 @@ export const RegisterPage: React.FC = () => {
 
         <p className="text-center text-xs text-stone-500 mt-6">
           Already registered?{' '}
-          <Link to="/login" className="text-[#2F7058] font-bold hover:underline">
+          <Link to="/login" className="text-[#5B6BD6] font-bold hover:underline">
             Log in here
           </Link>
         </p>

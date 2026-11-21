@@ -34,15 +34,15 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      'bg-[#173D32] hover:bg-[#2F7058] text-white shadow-sm hover:shadow-md hover:shadow-[#173D32]/20',
+      'bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white shadow-sm hover:shadow-md hover:shadow-[#1B1F4A]/20',
     emerald:
-      'bg-[#2F7058] hover:bg-[#173D32] text-white shadow-sm',
+      'bg-[#5B6BD6] hover:bg-[#1B1F4A] text-white shadow-sm',
     gold:
-      'bg-[#C5A66A] hover:bg-[#b09257] text-[#173D32] font-semibold shadow-sm hover:shadow-md hover:shadow-[#C5A66A]/30',
+      'bg-[#F0A92E] hover:bg-[#b09257] text-[#1B1F4A] font-semibold shadow-sm hover:shadow-md hover:shadow-[#F0A92E]/30',
     outline:
-      'border border-[#252A27]/20 hover:border-[#173D32] text-[#252A27] hover:text-[#173D32] bg-white/70 hover:bg-white',
+      'border border-[#1B1F4A]/20 hover:border-[#1B1F4A] text-[#1B1F4A] hover:text-[#1B1F4A] bg-white/70 hover:bg-white',
     ghost:
-      'text-[#252A27] hover:bg-[#252A27]/5 hover:text-[#173D32]',
+      'text-[#1B1F4A] hover:bg-[#1B1F4A]/5 hover:text-[#1B1F4A]',
     danger:
       'bg-rose-600 hover:bg-rose-700 text-white shadow-sm',
   };

@@ -159,7 +159,7 @@ export const ExplorePage: React.FC = () => {
     selectedAmenities.length;
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       {/* Main Content Area */}
@@ -175,7 +175,7 @@ export const ExplorePage: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-stone-200">
             <div>
               <div className="flex items-center gap-2 text-xs text-stone-500 mb-1">
-                <span className="flex items-center gap-1 text-[#2F7058] font-semibold">
+                <span className="flex items-center gap-1 text-[#5B6BD6] font-semibold">
                   <Compass className="w-3.5 h-3.5" />
                   <span>Migratory Sanctuaries</span>
                 </span>
@@ -184,7 +184,7 @@ export const ExplorePage: React.FC = () => {
                 <span>•</span>
                 <span>{searchState.adults + searchState.children} Guests</span>
               </div>
-              <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32]">
+              <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A]">
                 {destinationFilter ? `Stays in "${destinationFilter}"` : 'All Restorative Sanctuaries'}
                 <span className="text-sm font-normal text-stone-400 ml-2 font-sans">
                   ({filteredProperties.length} available)
@@ -200,14 +200,14 @@ export const ExplorePage: React.FC = () => {
                 onClick={() => setFilterDrawerOpen(true)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
                   activeFilterCount > 0
-                    ? 'bg-[#173D32] border-[#173D32] text-white shadow-sm'
+                    ? 'bg-[#1B1F4A] border-[#1B1F4A] text-white shadow-sm'
                     : 'bg-white border-stone-300 text-stone-700 hover:border-stone-400'
                 }`}
               >
                 <SlidersHorizontal className="w-3.5 h-3.5" />
                 <span>Filters</span>
                 {activeFilterCount > 0 && (
-                  <span className="w-5 h-5 rounded-full bg-[#C5A66A] text-[#173D32] text-[10px] font-bold flex items-center justify-center">
+                  <span className="w-5 h-5 rounded-full bg-[#F0A92E] text-[#1B1F4A] text-[10px] font-bold flex items-center justify-center">
                     {activeFilterCount}
                   </span>
                 )}
@@ -233,7 +233,7 @@ export const ExplorePage: React.FC = () => {
                   type="button"
                   onClick={() => setViewMode('grid')}
                   className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
-                    viewMode === 'grid' ? 'bg-[#173D32] text-white' : 'text-stone-500 hover:text-stone-800'
+                    viewMode === 'grid' ? 'bg-[#1B1F4A] text-white' : 'text-stone-500 hover:text-stone-800'
                   }`}
                   title="Grid View"
                 >
@@ -243,7 +243,7 @@ export const ExplorePage: React.FC = () => {
                   type="button"
                   onClick={() => setViewMode('list')}
                   className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
-                    viewMode === 'list' ? 'bg-[#173D32] text-white' : 'text-stone-500 hover:text-stone-800'
+                    viewMode === 'list' ? 'bg-[#1B1F4A] text-white' : 'text-stone-500 hover:text-stone-800'
                   }`}
                   title="List View"
                 >
@@ -253,7 +253,7 @@ export const ExplorePage: React.FC = () => {
                   type="button"
                   onClick={() => setViewMode('map')}
                   className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
-                    viewMode === 'map' ? 'bg-[#173D32] text-white' : 'text-stone-500 hover:text-stone-800'
+                    viewMode === 'map' ? 'bg-[#1B1F4A] text-white' : 'text-stone-500 hover:text-stone-800'
                   }`}
                   title="Map View"
                 >
@@ -298,7 +298,7 @@ export const ExplorePage: React.FC = () => {
               )}
               <button
                 onClick={handleResetFilters}
-                className="text-xs text-[#2F7058] hover:underline font-semibold ml-2 flex items-center gap-1"
+                className="text-xs text-[#5B6BD6] hover:underline font-semibold ml-2 flex items-center gap-1"
               >
                 <RotateCcw className="w-3 h-3" /> Clear all
               </button>
@@ -331,10 +331,10 @@ export const ExplorePage: React.FC = () => {
             ) : (
               /* Empty state */
               <div className="bg-white rounded-3xl p-12 text-center border border-stone-200/80 max-w-lg mx-auto my-12">
-                <div className="w-16 h-16 rounded-full bg-stone-100 text-[#173D32] flex items-center justify-center mx-auto mb-4">
-                  <Compass className="w-8 h-8 text-[#C5A66A]" />
+                <div className="w-16 h-16 rounded-full bg-stone-100 text-[#1B1F4A] flex items-center justify-center mx-auto mb-4">
+                  <Compass className="w-8 h-8 text-[#F0A92E]" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-[#173D32]">
+                <h3 className="font-serif text-xl font-bold text-[#1B1F4A]">
                   No Sanctuaries Found
                 </h3>
                 <p className="text-xs text-stone-500 mt-2 leading-relaxed">
@@ -343,7 +343,7 @@ export const ExplorePage: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleResetFilters}
-                  className="mt-6 bg-[#173D32] text-white text-xs font-semibold px-6 py-3 rounded-xl hover:bg-[#2F7058] transition-all"
+                  className="mt-6 bg-[#1B1F4A] text-white text-xs font-semibold px-6 py-3 rounded-xl hover:bg-[#5B6BD6] transition-all"
                 >
                   Reset All Filters
                 </button>

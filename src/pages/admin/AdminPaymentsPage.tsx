@@ -12,7 +12,7 @@ export const AdminPaymentsPage: React.FC = () => {
       <div className="space-y-8 text-left pb-16">
         <div className="pb-6 border-b border-stone-200">
           <span className="text-xs font-bold uppercase tracking-wider text-purple-700">Financial Clearinghouse</span>
-          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
             Simulated Payments & Transactions
           </h1>
           <p className="text-xs text-stone-500 mt-1">Gateway settlement references, platform commission calculations and tax disbursements</p>
@@ -22,7 +22,7 @@ export const AdminPaymentsPage: React.FC = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-xs text-left">
               <thead>
-                <tr className="border-b border-stone-200 bg-[#F8F7F1]/60 text-stone-400 uppercase tracking-wider text-[10px]">
+                <tr className="border-b border-stone-200 bg-[#EEF0F8]/60 text-stone-400 uppercase tracking-wider text-[10px]">
                   <th className="py-3.5 px-4">Txn Reference</th>
                   <th className="py-3.5 px-4">Booking</th>
                   <th className="py-3.5 px-4">Method</th>
@@ -40,9 +40,9 @@ export const AdminPaymentsPage: React.FC = () => {
                   return (
                     <tr key={b.id} className="hover:bg-stone-50">
                       <td className="py-3.5 px-4 font-mono font-bold text-stone-800">{b.payment.transactionReference}</td>
-                      <td className="py-3.5 px-4 font-mono text-[#173D32] font-semibold">{b.referenceNumber}</td>
+                      <td className="py-3.5 px-4 font-mono text-[#1B1F4A] font-semibold">{b.referenceNumber}</td>
                       <td className="py-3.5 px-4 uppercase text-[10px] font-bold text-stone-600">{b.payment.method}</td>
-                      <td className="py-3.5 px-4 font-bold text-[#173D32]">₹{b.pricing.grandTotal.toLocaleString()}</td>
+                      <td className="py-3.5 px-4 font-bold text-[#1B1F4A]">₹{b.pricing.grandTotal.toLocaleString()}</td>
                       <td className="py-3.5 px-4 text-purple-700 font-semibold">₹{fee.toLocaleString()}</td>
                       <td className="py-3.5 px-4 text-emerald-700 font-bold">₹{net.toLocaleString()}</td>
                       <td className="py-3.5 px-4">

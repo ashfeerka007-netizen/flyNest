@@ -43,7 +43,7 @@ export const AdminCommissionsPage: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-wider text-purple-700">
             Platform Monetization Model
           </span>
-          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
             Commission & Fee Architecture
           </h1>
           <p className="text-xs text-stone-500 mt-1">
@@ -140,7 +140,7 @@ export const AdminCommissionsPage: React.FC = () => {
           <div className="pt-4 border-t border-stone-100 flex justify-end">
             <button
               type="submit"
-              className="bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
+              className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
             >
               <Save className="w-4 h-4" />
               <span>Update Fee Parameters</span>

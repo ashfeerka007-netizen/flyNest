@@ -47,7 +47,7 @@ export const CategoryBar: React.FC<CategoryBarProps> = ({
   onSelectCategory,
 }) => {
   return (
-    <div className="w-full bg-[#F8F7F1] border-b border-[#E8E0D1] py-4 sticky top-[65px] z-30">
+    <div className="w-full bg-[#EEF0F8] border-b border-[#DCE1F2] py-4 sticky top-[65px] z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-6 overflow-x-auto no-scrollbar py-1">
           {CATEGORIES.map((cat) => {
@@ -60,15 +60,15 @@ export const CategoryBar: React.FC<CategoryBarProps> = ({
                 onClick={() => onSelectCategory(cat.id)}
                 className={`flex flex-col items-center gap-2 pb-2 border-b-2 transition-all shrink-0 cursor-pointer group ${
                   isSelected
-                    ? 'border-[#173D32] text-[#173D32] font-semibold'
-                    : 'border-transparent text-stone-500 hover:text-[#173D32] hover:border-stone-300'
+                    ? 'border-[#1B1F4A] text-[#1B1F4A] font-semibold'
+                    : 'border-transparent text-stone-500 hover:text-[#1B1F4A] hover:border-stone-300'
                 }`}
               >
                 <div
                   className={`p-2 rounded-xl transition-all ${
                     isSelected
-                      ? 'bg-[#173D32] text-[#C5A66A]'
-                      : 'bg-stone-100 group-hover:bg-stone-200 text-stone-600 group-hover:text-[#173D32]'
+                      ? 'bg-[#1B1F4A] text-[#F0A92E]'
+                      : 'bg-stone-100 group-hover:bg-stone-200 text-stone-600 group-hover:text-[#1B1F4A]'
                   }`}
                 >
                   <Icon className="w-5 h-5" />

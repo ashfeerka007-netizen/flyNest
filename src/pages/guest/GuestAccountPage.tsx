@@ -24,16 +24,16 @@ export const GuestAccountPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
           <div className="mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
               Traveler Profile
             </span>
-            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A] mt-1">
               Account Settings
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -46,16 +46,16 @@ export const GuestAccountPage: React.FC = () => {
               <img
                 src={currentUser?.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'}
                 alt={name}
-                className="w-20 h-20 rounded-full object-cover border-2 border-[#C5A66A]"
+                className="w-20 h-20 rounded-full object-cover border-2 border-[#F0A92E]"
                 onError={handleAvatarError}
               />
               <div>
-                <h3 className="font-serif text-lg font-bold text-[#173D32] flex items-center gap-2">
+                <h3 className="font-serif text-lg font-bold text-[#1B1F4A] flex items-center gap-2">
                   <span>{name}</span>
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 </h3>
                 <p className="text-xs text-stone-400 font-mono">{email}</p>
-                <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#173D32]/10 text-[#173D32]">
+                <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#1B1F4A]/10 text-[#1B1F4A]">
                   Verified Guest Explorer
                 </span>
               </div>
@@ -70,7 +70,7 @@ export const GuestAccountPage: React.FC = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                   />
                 </div>
                 <div>
@@ -80,7 +80,7 @@ export const GuestAccountPage: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                   />
                 </div>
               </div>
@@ -92,7 +92,7 @@ export const GuestAccountPage: React.FC = () => {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                   />
                 </div>
                 <div>
@@ -101,7 +101,7 @@ export const GuestAccountPage: React.FC = () => {
                     type="text"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                   />
                 </div>
               </div>
@@ -112,14 +112,14 @@ export const GuestAccountPage: React.FC = () => {
                   rows={3}
                   value={bio}
                   onChange={(e) => setBio(e.target.value)}
-                  className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                  className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                 />
               </div>
 
               <div className="pt-4 flex justify-end">
                 <button
                   type="submit"
-                  className="bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
+                  className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
                 >
                   <Save className="w-4 h-4" />
                   <span>Save Changes</span>

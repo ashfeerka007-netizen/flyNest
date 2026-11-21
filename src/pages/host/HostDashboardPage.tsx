@@ -47,10 +47,10 @@ export const HostDashboardPage: React.FC = () => {
         {/* Welcome Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-stone-200">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#5B6BD6]">
               Host Management Overview
             </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               Sanctuary Dashboard
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -61,9 +61,9 @@ export const HostDashboardPage: React.FC = () => {
           <div className="flex items-center gap-3">
             <Link
               to="/host/properties/new"
-              className="bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer"
+              className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer"
             >
-              <PlusCircle className="w-4 h-4 text-[#C5A66A]" />
+              <PlusCircle className="w-4 h-4 text-[#F0A92E]" />
               <span>Add New Sanctuary</span>
             </Link>
           </div>
@@ -73,7 +73,7 @@ export const HostDashboardPage: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
           <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Total Stays</span>
-            <p className="text-xl font-bold text-[#173D32] mt-1">{totalHostProperties}</p>
+            <p className="text-xl font-bold text-[#1B1F4A] mt-1">{totalHostProperties}</p>
             <span className="text-[10px] text-stone-500">Across corridors</span>
           </div>
 
@@ -91,19 +91,19 @@ export const HostDashboardPage: React.FC = () => {
 
           <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Total Bookings</span>
-            <p className="text-xl font-bold text-[#173D32] mt-1">{totalBookings}</p>
+            <p className="text-xl font-bold text-[#1B1F4A] mt-1">{totalBookings}</p>
             <span className="text-[10px] text-stone-500">All-time stays</span>
           </div>
 
           <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Upcoming Checks</span>
-            <p className="text-xl font-bold text-[#2F7058] mt-1">{confirmedBookings.length}</p>
+            <p className="text-xl font-bold text-[#5B6BD6] mt-1">{confirmedBookings.length}</p>
             <span className="text-[10px] text-stone-500">This month</span>
           </div>
 
           <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Net Revenue</span>
-            <p className="text-lg font-bold text-[#173D32] mt-1 font-serif">
+            <p className="text-lg font-bold text-[#1B1F4A] mt-1 font-serif">
               {BRAND.currency.symbol}{Math.round(netEarnings / 1000)}k
             </p>
             <span className="text-[10px] text-emerald-600 font-medium">+18% vs last mo</span>
@@ -111,7 +111,7 @@ export const HostDashboardPage: React.FC = () => {
 
           <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs">
             <span className="text-[10px] font-bold text-stone-400 uppercase">Occupancy Rate</span>
-            <p className="text-xl font-bold text-[#173D32] mt-1">84%</p>
+            <p className="text-xl font-bold text-[#1B1F4A] mt-1">84%</p>
             <span className="text-[10px] text-stone-500">High season peak</span>
           </div>
         </div>
@@ -122,7 +122,7 @@ export const HostDashboardPage: React.FC = () => {
           <div className="lg:col-span-2 bg-white rounded-3xl p-6 border border-stone-200 shadow-xs">
             <div className="flex items-center justify-between pb-4 border-b border-stone-100">
               <div>
-                <h3 className="font-serif text-base font-bold text-[#173D32]">Monthly Earnings Trend</h3>
+                <h3 className="font-serif text-base font-bold text-[#1B1F4A]">Monthly Earnings Trend</h3>
                 <p className="text-xs text-stone-400">Past 6 months payout performance</p>
               </div>
               <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">
@@ -140,11 +140,11 @@ export const HostDashboardPage: React.FC = () => {
                       ₹{Math.round(d.revenue / 1000)}k
                     </div>
                     <div
-                      className="w-full bg-[#173D32]/15 group-hover:bg-[#173D32] rounded-t-xl transition-all duration-300 relative"
+                      className="w-full bg-[#1B1F4A]/15 group-hover:bg-[#1B1F4A] rounded-t-xl transition-all duration-300 relative"
                       style={{ height: `${heightPercent}%` }}
                     >
                       <div
-                        className="w-full bg-[#2F7058] rounded-t-xl absolute bottom-0 transition-all duration-300"
+                        className="w-full bg-[#5B6BD6] rounded-t-xl absolute bottom-0 transition-all duration-300"
                         style={{ height: `${heightPercent * 0.7}%` }}
                       />
                     </div>
@@ -158,7 +158,7 @@ export const HostDashboardPage: React.FC = () => {
           {/* Quick Property Status & Pending Approvals (1 col) */}
           <div className="bg-white rounded-3xl p-6 border border-stone-200 shadow-xs flex flex-col justify-between">
             <div>
-              <h3 className="font-serif text-base font-bold text-[#173D32] mb-1">
+              <h3 className="font-serif text-base font-bold text-[#1B1F4A] mb-1">
                 Listing Status Ratio
               </h3>
               <p className="text-xs text-stone-400 mb-6">Marketplace verification progress</p>
@@ -203,14 +203,14 @@ export const HostDashboardPage: React.FC = () => {
         <div className="bg-white rounded-3xl p-6 border border-stone-200 shadow-xs">
           <div className="flex items-center justify-between pb-4 border-b border-stone-100 mb-4">
             <div>
-              <h3 className="font-serif text-base font-bold text-[#173D32]">
+              <h3 className="font-serif text-base font-bold text-[#1B1F4A]">
                 Recent Guest Reservations
               </h3>
               <p className="text-xs text-stone-400">Incoming bookings across your listings</p>
             </div>
             <Link
               to="/host/bookings"
-              className="text-xs font-bold text-[#2F7058] hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-[#5B6BD6] hover:underline flex items-center gap-1"
             >
               <span>Manage All ({bookings.length})</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -232,11 +232,11 @@ export const HostDashboardPage: React.FC = () => {
               <tbody className="divide-y divide-stone-100">
                 {bookings.slice(0, 4).map((b) => (
                   <tr key={b.id} className="hover:bg-stone-50 transition-colors">
-                    <td className="py-3 px-3 font-mono font-bold text-[#173D32]">{b.referenceNumber}</td>
+                    <td className="py-3 px-3 font-mono font-bold text-[#1B1F4A]">{b.referenceNumber}</td>
                     <td className="py-3 px-3 font-medium text-stone-800 truncate max-w-[200px]">{b.propertyTitle}</td>
                     <td className="py-3 px-3">{b.guestDetails.fullName}</td>
                     <td className="py-3 px-3 font-mono text-stone-500">{b.checkIn} → {b.checkOut}</td>
-                    <td className="py-3 px-3 font-bold text-[#173D32]">₹{b.pricing.grandTotal.toLocaleString()}</td>
+                    <td className="py-3 px-3 font-bold text-[#1B1F4A]">₹{b.pricing.grandTotal.toLocaleString()}</td>
                     <td className="py-3 px-3">
                       <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold capitalize ${
                         b.status === 'confirmed' ? 'bg-emerald-100 text-emerald-800' : 'bg-blue-100 text-blue-800'

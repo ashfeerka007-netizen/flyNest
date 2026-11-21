@@ -1,5 +1,5 @@
 // Configurable Brand Identity - Central definition
-// Never hardcoded, easily customizable for rebranding
+// Version 2: Flock-of-roofs mark, Midnight Indigo, Sunrise Gold, Mist, Sky
 
 export interface BrandConfig {
   name: string;
@@ -14,13 +14,17 @@ export interface BrandConfig {
     name: string;
   };
   colors: {
+    midnightIndigo: string;
+    sunriseGold: string;
+    mist: string;
+    sky: string;
+    white: string;
     forest: string;
     emerald: string;
     ivory: string;
     sand: string;
     charcoal: string;
     gold: string;
-    white: string;
   };
   social: {
     instagram: string;
@@ -31,7 +35,7 @@ export interface BrandConfig {
 }
 
 export const BRAND: BrandConfig = {
-  name: 'FlyNest',
+  name: 'flynest',
   tagline: 'Every Journey Deserves a Beautiful Place to Stay.',
   subtitle: 'Discover extraordinary stays, explore new destinations and find your sanctuary along the journey.',
   symbolism: 'Inspired by the enduring spirit of migratory birds finding restorative sanctuaries across continents.',
@@ -43,13 +47,17 @@ export const BRAND: BrandConfig = {
     name: 'Indian Rupee',
   },
   colors: {
-    forest: '#173D32',
-    emerald: '#2F7058',
-    ivory: '#F8F7F1',
-    sand: '#E8E0D1',
-    charcoal: '#252A27',
-    gold: '#C5A66A',
+    midnightIndigo: '#1B1F4A',
+    sunriseGold: '#F0A92E',
+    mist: '#EEF0F8',
+    sky: '#5B6BD6',
     white: '#FFFFFF',
+    forest: '#1B1F4A',
+    emerald: '#5B6BD6',
+    ivory: '#EEF0F8',
+    sand: '#DCE1F2',
+    charcoal: '#1B1F4A',
+    gold: '#F0A92E',
   },
   social: {
     instagram: 'https://instagram.com/flynest.stays',

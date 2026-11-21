@@ -26,10 +26,10 @@ export const HostPropertiesPage: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-stone-200">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#5B6BD6]">
               Listing Management
             </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               My Managed Sanctuaries ({properties.length})
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -39,9 +39,9 @@ export const HostPropertiesPage: React.FC = () => {
 
           <Link
             to="/host/properties/new"
-            className="bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer w-fit"
+            className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer w-fit"
           >
-            <PlusCircle className="w-4 h-4 text-[#C5A66A]" />
+            <PlusCircle className="w-4 h-4 text-[#F0A92E]" />
             <span>Create New Listing Wizard</span>
           </Link>
         </div>
@@ -87,7 +87,7 @@ export const HostPropertiesPage: React.FC = () => {
 
                 <div className="p-5">
                   <div className="flex items-center justify-between text-xs text-stone-500 mb-1">
-                    <span className="text-[#2F7058] font-bold uppercase text-[10px]">
+                    <span className="text-[#5B6BD6] font-bold uppercase text-[10px]">
                       {p.category}
                     </span>
                     <span className="flex items-center gap-1 font-semibold text-stone-800">
@@ -97,7 +97,7 @@ export const HostPropertiesPage: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-base font-bold text-[#173D32] line-clamp-1">
+                  <h3 className="font-serif text-base font-bold text-[#1B1F4A] line-clamp-1">
                     {p.title}
                   </h3>
                   <p className="text-xs text-stone-400 flex items-center gap-1 mt-1 truncate">
@@ -107,7 +107,7 @@ export const HostPropertiesPage: React.FC = () => {
 
                   <div className="mt-4 pt-3 border-t border-stone-100 flex items-baseline justify-between">
                     <div>
-                      <span className="text-base font-bold text-[#173D32]">
+                      <span className="text-base font-bold text-[#1B1F4A]">
                         {BRAND.currency.symbol}{p.pricePerNight.toLocaleString()}
                       </span>
                       <span className="text-xs text-stone-400"> / night</span>
@@ -120,10 +120,10 @@ export const HostPropertiesPage: React.FC = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="p-4 bg-[#F8F7F1]/60 border-t border-stone-100 flex items-center justify-between text-xs">
+              <div className="p-4 bg-[#EEF0F8]/60 border-t border-stone-100 flex items-center justify-between text-xs">
                 <Link
                   to={`/property/${p.id}`}
-                  className="font-semibold text-stone-600 hover:text-[#173D32] flex items-center gap-1"
+                  className="font-semibold text-stone-600 hover:text-[#1B1F4A] flex items-center gap-1"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                   <span>Public View</span>

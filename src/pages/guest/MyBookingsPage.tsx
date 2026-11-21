@@ -40,17 +40,17 @@ export const MyBookingsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
           {/* Header */}
           <div className="mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
               Sanctuary Passport
             </span>
-            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A] mt-1">
               My Reservations
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -66,7 +66,7 @@ export const MyBookingsPage: React.FC = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`text-xs font-semibold px-4 py-2 rounded-xl capitalize transition-all cursor-pointer shrink-0 ${
                   activeTab === tab
-                    ? 'bg-[#173D32] text-white shadow-xs'
+                    ? 'bg-[#1B1F4A] text-white shadow-xs'
                     : 'text-stone-600 hover:bg-stone-200/60'
                 }`}
               >
@@ -93,7 +93,7 @@ export const MyBookingsPage: React.FC = () => {
                   <div className="flex-1 flex flex-col justify-between h-full w-full">
                     <div>
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#C5A66A] bg-[#173D32] px-2 py-0.5 rounded-md">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#F0A92E] bg-[#1B1F4A] px-2 py-0.5 rounded-md">
                           {b.propertyCategory}
                         </span>
 
@@ -111,11 +111,11 @@ export const MyBookingsPage: React.FC = () => {
                         </span>
                       </div>
 
-                      <h3 className="font-serif text-lg font-bold text-[#173D32] mt-1.5">
+                      <h3 className="font-serif text-lg font-bold text-[#1B1F4A] mt-1.5">
                         {b.propertyTitle}
                       </h3>
                       <p className="text-xs text-stone-500 flex items-center gap-1 mt-0.5">
-                        <MapPin className="w-3.5 h-3.5 text-[#2F7058]" />
+                        <MapPin className="w-3.5 h-3.5 text-[#5B6BD6]" />
                         <span>{b.propertyLocation}</span>
                       </p>
                     </div>
@@ -128,11 +128,11 @@ export const MyBookingsPage: React.FC = () => {
                       </div>
                       <div>
                         <span className="text-[10px] uppercase text-stone-400 font-bold block">Ref Code</span>
-                        <span className="font-mono font-semibold text-[#173D32]">{b.referenceNumber}</span>
+                        <span className="font-mono font-semibold text-[#1B1F4A]">{b.referenceNumber}</span>
                       </div>
                       <div>
                         <span className="text-[10px] uppercase text-stone-400 font-bold block">Total Paid</span>
-                        <span className="font-bold text-[#173D32]">{BRAND.currency.symbol}{b.pricing.grandTotal.toLocaleString()}</span>
+                        <span className="font-bold text-[#1B1F4A]">{BRAND.currency.symbol}{b.pricing.grandTotal.toLocaleString()}</span>
                       </div>
                     </div>
 
@@ -140,7 +140,7 @@ export const MyBookingsPage: React.FC = () => {
                     <div className="flex items-center justify-between pt-1">
                       <Link
                         to={`/property/${b.propertyId}`}
-                        className="text-xs font-semibold text-[#2F7058] hover:underline flex items-center gap-1"
+                        className="text-xs font-semibold text-[#5B6BD6] hover:underline flex items-center gap-1"
                       >
                         <span>View Sanctuary Details</span>
                         <ExternalLink className="w-3 h-3" />
@@ -163,11 +163,11 @@ export const MyBookingsPage: React.FC = () => {
           ) : (
             <div className="bg-white rounded-3xl p-12 text-center border border-stone-200/80 max-w-md mx-auto my-12">
               <Calendar className="w-10 h-10 text-stone-300 mx-auto mb-3" />
-              <h3 className="font-serif text-lg font-bold text-[#173D32]">No Reservations Found</h3>
+              <h3 className="font-serif text-lg font-bold text-[#1B1F4A]">No Reservations Found</h3>
               <p className="text-xs text-stone-500 mt-1">You have no {activeTab !== 'all' ? activeTab : ''} bookings at the moment.</p>
               <Link
                 to="/explore"
-                className="mt-5 inline-block bg-[#173D32] text-white text-xs font-semibold px-5 py-2.5 rounded-xl hover:bg-[#2F7058] transition-all"
+                className="mt-5 inline-block bg-[#1B1F4A] text-white text-xs font-semibold px-5 py-2.5 rounded-xl hover:bg-[#5B6BD6] transition-all"
               >
                 Discover Sanctuaries
               </Link>

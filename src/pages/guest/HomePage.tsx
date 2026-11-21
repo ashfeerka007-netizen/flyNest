@@ -76,7 +76,7 @@ export const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar transparentAtTop={true} />
 
       {/* 1. Hero Section */}
@@ -90,7 +90,7 @@ export const HomePage: React.FC = () => {
           }}
         >
           {/* Subtle multi-stop gradient for contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#173D32] via-[#173D32]/40 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1B1F4A] via-[#1B1F4A]/40 to-black/50" />
         </div>
 
         <MigrationPattern opacity={0.25} />
@@ -98,7 +98,7 @@ export const HomePage: React.FC = () => {
         <div className="relative z-10 max-w-5xl mx-auto text-center text-white mt-10">
           {/* Brand Concept Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs font-semibold tracking-wider uppercase mb-6 animate-fade-in">
-            <Feather className="w-3.5 h-3.5 text-[#C5A66A]" />
+            <Feather className="w-3.5 h-3.5 text-[#F0A92E]" />
             <span>The Migratory Spirit • Curated Sanctuaries</span>
           </div>
 
@@ -118,15 +118,15 @@ export const HomePage: React.FC = () => {
           {/* Quick flight stats below search */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-medium text-stone-300">
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#C5A66A]" />
+              <CheckCircle2 className="w-4 h-4 text-[#F0A92E]" />
               <span>100% Verified Sanctuaries</span>
             </span>
             <span className="flex items-center gap-2">
-              <Wind className="w-4 h-4 text-[#C5A66A]" />
+              <Wind className="w-4 h-4 text-[#F0A92E]" />
               <span>Low-Impact Regenerative Stays</span>
             </span>
             <span className="flex items-center gap-2">
-              <Trees className="w-4 h-4 text-[#C5A66A]" />
+              <Trees className="w-4 h-4 text-[#F0A92E]" />
               <span>Avian & Nature Corridors</span>
             </span>
           </div>
@@ -143,10 +143,10 @@ export const HomePage: React.FC = () => {
       <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
               Seasonal Flyways
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32] mt-1">
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A] mt-1">
               Featured Destinations
             </h2>
             <p className="text-sm text-stone-500 mt-2 max-w-xl">
@@ -155,7 +155,7 @@ export const HomePage: React.FC = () => {
           </div>
           <Link
             to="/destinations"
-            className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#173D32] hover:text-[#2F7058] group"
+            className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#1B1F4A] hover:text-[#5B6BD6] group"
           >
             <span>Explore All 15 Destinations</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -177,7 +177,7 @@ export const HomePage: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 text-white">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-[#C5A66A] block">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-[#F0A92E] block">
                   {dest.tag}
                 </span>
                 <h3 className="font-serif text-lg font-bold leading-tight">{dest.name}</h3>
@@ -189,14 +189,14 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 4. Handpicked Curated Stays */}
-      <section className="py-16 bg-[#E8E0D1]/30 border-y border-[#E8E0D1] text-left">
+      <section className="py-16 bg-[#DCE1F2]/30 border-y border-[#DCE1F2] text-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
                 Handpicked For You
               </span>
-              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32] mt-1">
+              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A] mt-1">
                 Restorative Stays Along The Path
               </h2>
               <p className="text-sm text-stone-500 mt-2 max-w-xl">
@@ -205,7 +205,7 @@ export const HomePage: React.FC = () => {
             </div>
             <Link
               to="/explore"
-              className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#173D32] hover:text-[#2F7058] group"
+              className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#1B1F4A] hover:text-[#5B6BD6] group"
             >
               <span>View All Properties</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -224,10 +224,10 @@ export const HomePage: React.FC = () => {
       <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
               Unconventional Architecture
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32] mt-1">
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A] mt-1">
               Canopy Nests, Treehouses & Domes
             </h2>
             <p className="text-sm text-stone-500 mt-2 max-w-xl">
@@ -236,7 +236,7 @@ export const HomePage: React.FC = () => {
           </div>
           <Link
             to="/explore?category=Unique Stays"
-            className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#173D32] hover:text-[#2F7058] group"
+            className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#1B1F4A] hover:text-[#5B6BD6] group"
           >
             <span>See Unique Stays</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -255,16 +255,16 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
                 Highest Rated
               </span>
-              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32] mt-1">
+              <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A] mt-1">
                 Beloved By Migratory Travelers
               </h2>
             </div>
             <Link
               to="/explore?sortBy=rating"
-              className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#173D32] hover:text-[#2F7058] group"
+              className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold text-[#1B1F4A] hover:text-[#5B6BD6] group"
             >
               <span>Explore Highest Rated</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -281,11 +281,11 @@ export const HomePage: React.FC = () => {
 
       {/* 7. Become a Host Banner */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="relative rounded-3xl overflow-hidden bg-[#173D32] text-white p-8 sm:p-16 border border-[#2F7058] shadow-2xl flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+        <div className="relative rounded-3xl overflow-hidden bg-[#1B1F4A] text-white p-8 sm:p-16 border border-[#5B6BD6] shadow-2xl flex flex-col lg:flex-row lg:items-center justify-between gap-10">
           <MigrationPattern opacity={0.2} />
 
           <div className="max-w-xl text-left relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-[#C5A66A] mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-[#F0A92E] mb-4">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Sanctuary Custodians</span>
             </div>
@@ -298,7 +298,7 @@ export const HomePage: React.FC = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/become-a-host"
-                className="bg-[#C5A66A] hover:bg-[#b09257] text-[#173D32] font-semibold text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2"
+                className="bg-[#F0A92E] hover:bg-[#b09257] text-[#1B1F4A] font-semibold text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2"
               >
                 <span>Start Hosting Today</span>
                 <ArrowRight className="w-4 h-4" />
@@ -320,7 +320,7 @@ export const HomePage: React.FC = () => {
               onError={handleImageError}
             />
             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 to-transparent p-5 text-left">
-              <p className="text-xs font-semibold text-[#C5A66A]">Average Host Earnings</p>
+              <p className="text-xs font-semibold text-[#F0A92E]">Average Host Earnings</p>
               <p className="text-2xl font-serif font-bold text-white mt-0.5">₹1,45,000 / month</p>
               <p className="text-[11px] text-stone-300 mt-1">Full host protection, verified guest community & concierge support.</p>
             </div>
@@ -329,13 +329,13 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 8. Guest Testimonials */}
-      <section className="py-16 bg-[#F8F7F1] border-t border-[#E8E0D1] text-left">
+      <section className="py-16 bg-[#EEF0F8] border-t border-[#DCE1F2] text-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
               Stories from the Flight
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               Sanctuary Experiences
             </h2>
           </div>
@@ -365,9 +365,9 @@ export const HomePage: React.FC = () => {
                     onError={handleAvatarError}
                   />
                   <div>
-                    <h4 className="text-xs font-bold text-[#173D32]">{test.author}</h4>
+                    <h4 className="text-xs font-bold text-[#1B1F4A]">{test.author}</h4>
                     <p className="text-[10px] text-stone-400">{test.role}</p>
-                    <p className="text-[10px] text-[#2F7058] font-medium mt-0.5">
+                    <p className="text-[10px] text-[#5B6BD6] font-medium mt-0.5">
                       {test.stayTitle} • {test.destination}
                     </p>
                   </div>

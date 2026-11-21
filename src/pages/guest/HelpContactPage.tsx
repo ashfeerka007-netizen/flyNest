@@ -36,16 +36,16 @@ export const HelpContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#5B6BD6]">
               Sanctuary Concierge
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#173D32] mt-2">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#1B1F4A] mt-2">
               Help & Concierge Inquiries
             </h1>
             <p className="text-sm text-stone-600 mt-2">
@@ -56,7 +56,7 @@ export const HelpContactPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
             {/* Contact Form */}
             <div className="bg-white rounded-3xl p-8 border border-stone-200 shadow-xs">
-              <h3 className="font-serif text-xl font-bold text-[#173D32] mb-4">
+              <h3 className="font-serif text-xl font-bold text-[#1B1F4A] mb-4">
                 Message Our Concierge
               </h3>
 
@@ -68,7 +68,7 @@ export const HelpContactPage: React.FC = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                     placeholder="e.g. Vikramaditya"
                   />
                 </div>
@@ -80,7 +80,7 @@ export const HelpContactPage: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                     placeholder="vikram@example.com"
                   />
                 </div>
@@ -92,14 +92,14 @@ export const HelpContactPage: React.FC = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                     placeholder="How may our sanctuary team assist you?"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Send Concierge Inquiry</span>
@@ -109,8 +109,8 @@ export const HelpContactPage: React.FC = () => {
 
             {/* Direct Details & FAQ */}
             <div className="space-y-6">
-              <div className="p-6 rounded-3xl bg-[#173D32] text-white space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#C5A66A]">
+              <div className="p-6 rounded-3xl bg-[#1B1F4A] text-white space-y-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#F0A92E]">
                   Direct Contact
                 </span>
                 <p className="text-xs text-stone-300">
@@ -126,7 +126,7 @@ export const HelpContactPage: React.FC = () => {
 
               {/* FAQs */}
               <div className="space-y-3">
-                <h4 className="font-serif text-lg font-bold text-[#173D32]">Frequently Asked Questions</h4>
+                <h4 className="font-serif text-lg font-bold text-[#1B1F4A]">Frequently Asked Questions</h4>
                 {faqs.map((faq, i) => (
                   <div
                     key={i}
@@ -135,7 +135,7 @@ export const HelpContactPage: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                      className="w-full p-4 text-left flex items-center justify-between text-xs font-bold text-[#173D32]"
+                      className="w-full p-4 text-left flex items-center justify-between text-xs font-bold text-[#1B1F4A]"
                     >
                       <span>{faq.q}</span>
                       <ChevronDown

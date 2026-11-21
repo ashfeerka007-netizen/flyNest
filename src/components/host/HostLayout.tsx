@@ -51,7 +51,7 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex text-[#252A27]">
+    <div className="min-h-screen bg-[#EEF0F8] flex text-[#1B1F4A]">
       {/* Mobile Sidebar Backdrop */}
       {sidebarOpen && (
         <div
@@ -62,17 +62,17 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
 
       {/* Host Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-[#173D32] text-white flex flex-col justify-between transform transition-transform duration-300 lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-[#1B1F4A] text-white flex flex-col justify-between transform transition-transform duration-300 lg:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div>
           {/* Brand & Portal Header */}
-          <div className="p-5 border-b border-[#2F7058]/50 flex items-center justify-between">
+          <div className="p-5 border-b border-[#5B6BD6]/50 flex items-center justify-between">
             <Link to="/host/dashboard" className="flex items-center gap-2">
               <BrandLogo variant="light" size="sm" />
               <div className="ml-1">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-[#C5A66A] block">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#F0A92E] block">
                   Host Workspace
                 </span>
               </div>
@@ -86,17 +86,17 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
           </div>
 
           {/* Host Profile Info Card */}
-          <div className="p-4 mx-3 my-4 rounded-2xl bg-[#2F7058]/30 border border-[#2F7058]/40 flex items-center gap-3">
+          <div className="p-4 mx-3 my-4 rounded-2xl bg-[#5B6BD6]/30 border border-[#5B6BD6]/40 flex items-center gap-3">
             <img
               src={currentUser?.avatar || 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80'}
               alt="Host"
-              className="w-10 h-10 rounded-full object-cover border border-[#C5A66A]/60"
+              className="w-10 h-10 rounded-full object-cover border border-[#F0A92E]/60"
               onError={handleAvatarError}
             />
             <div className="overflow-hidden">
               <div className="flex items-center gap-1">
                 <p className="text-xs font-bold text-white truncate">{currentUser?.name || 'Tara Varma'}</p>
-                <Sparkles className="w-3 h-3 text-[#C5A66A] shrink-0" />
+                <Sparkles className="w-3 h-3 text-[#F0A92E] shrink-0" />
               </div>
               <p className="text-[10px] text-stone-300 truncate">Superhost Sanctuary</p>
             </div>
@@ -115,9 +115,9 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all ${
                     isActive
-                      ? 'bg-[#C5A66A] text-[#173D32] font-semibold shadow-sm'
+                      ? 'bg-[#F0A92E] text-[#1B1F4A] font-semibold shadow-sm'
                       : item.highlight
-                      ? 'bg-[#2F7058] text-white hover:bg-[#2F7058]/80'
+                      ? 'bg-[#5B6BD6] text-white hover:bg-[#5B6BD6]/80'
                       : 'text-stone-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -137,7 +137,7 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
         </div>
 
         {/* Bottom Actions */}
-        <div className="p-4 border-t border-[#2F7058]/50 space-y-2">
+        <div className="p-4 border-t border-[#5B6BD6]/50 space-y-2">
           <button
             onClick={() => {
               switchRole('guest');
@@ -145,7 +145,7 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
             }}
             className="w-full flex items-center gap-2 text-xs text-stone-300 hover:text-white py-2 px-3 rounded-xl hover:bg-white/5 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 text-[#C5A66A]" />
+            <ArrowLeft className="w-4 h-4 text-[#F0A92E]" />
             <span>Switch to Guest Website</span>
           </button>
 
@@ -171,7 +171,7 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
             >
               <Menu className="w-5 h-5" />
             </button>
-            <h1 className="font-serif text-lg font-bold text-[#173D32] hidden sm:block">
+            <h1 className="font-serif text-lg font-bold text-[#1B1F4A] hidden sm:block">
               Host Management Portal
             </h1>
           </div>
@@ -179,9 +179,9 @@ export const HostLayout: React.FC<HostLayoutProps> = ({ children }) => {
           <div className="flex items-center gap-3">
             <Link
               to="/host/properties/new"
-              className="text-xs font-semibold px-3.5 py-2 rounded-xl bg-[#173D32] hover:bg-[#2F7058] text-white flex items-center gap-1.5 shadow-sm transition-all"
+              className="text-xs font-semibold px-3.5 py-2 rounded-xl bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white flex items-center gap-1.5 shadow-sm transition-all"
             >
-              <PlusCircle className="w-3.5 h-3.5 text-[#C5A66A]" />
+              <PlusCircle className="w-3.5 h-3.5 text-[#F0A92E]" />
               <span>Create Listing</span>
             </Link>
 

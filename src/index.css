@@ -2,30 +2,38 @@
 
 @layer base {
   :root {
-    --color-forest: #173D32;
-    --color-emerald: #2F7058;
-    --color-ivory: #F8F7F1;
-    --color-sand: #E8E0D1;
-    --color-charcoal: #252A27;
-    --color-gold: #C5A66A;
+    --color-midnight: #1B1F4A;
+    --color-sunrise: #F0A92E;
+    --color-mist: #EEF0F8;
+    --color-sky: #5B6BD6;
+    --color-forest: #1B1F4A;
+    --color-emerald: #5B6BD6;
+    --color-ivory: #EEF0F8;
+    --color-sand: #DCE1F2;
+    --color-charcoal: #1B1F4A;
+    --color-gold: #F0A92E;
   }
 }
 
 @theme {
-  --color-forest: #173D32;
-  --color-emerald: #2F7058;
-  --color-ivory: #F8F7F1;
-  --color-sand: #E8E0D1;
-  --color-charcoal: #252A27;
-  --color-gold: #C5A66A;
+  --color-midnight: #1B1F4A;
+  --color-sunrise: #F0A92E;
+  --color-mist: #EEF0F8;
+  --color-sky: #5B6BD6;
+  --color-forest: #1B1F4A;
+  --color-emerald: #5B6BD6;
+  --color-ivory: #EEF0F8;
+  --color-sand: #DCE1F2;
+  --color-charcoal: #1B1F4A;
+  --color-gold: #F0A92E;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #F8F7F1;
-  color: #252A27;
+  background-color: #EEF0F8;
+  color: #1B1F4A;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -42,14 +50,14 @@ html {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F7F1;
+  background: #EEF0F8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C5A66A80;
+  background: #F0A92E80;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2F7058;
+  background: #5B6BD6;
 }
 
 /* Keyframe animations */

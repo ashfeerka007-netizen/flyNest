@@ -80,11 +80,11 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
       >
         {/* Destination Field */}
         <div ref={destRef} className="relative flex-1 px-4 py-2 hover:bg-stone-50 rounded-2xl sm:rounded-full transition-colors cursor-pointer">
-          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#173D32]">
+          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#1B1F4A]">
             Where
           </label>
           <div className="flex items-center gap-2 mt-0.5">
-            <MapPin className="w-4 h-4 text-[#C5A66A] shrink-0" />
+            <MapPin className="w-4 h-4 text-[#F0A92E] shrink-0" />
             <input
               type="text"
               value={destination}
@@ -94,7 +94,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
               }}
               onFocus={() => setDestPickerOpen(true)}
               placeholder="Search destinations (Wayanad, Goa...)"
-              className="w-full text-sm font-medium text-[#252A27] bg-transparent focus:outline-hidden placeholder-stone-400"
+              className="w-full text-sm font-medium text-[#1B1F4A] bg-transparent focus:outline-hidden placeholder-stone-400"
             />
             {destination && (
               <button
@@ -114,7 +114,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                 <span className="text-xs font-bold uppercase tracking-wider text-stone-500">
                   Curated Sanctuaries
                 </span>
-                <span className="text-[10px] text-[#2F7058] flex items-center gap-1 font-semibold">
+                <span className="text-[10px] text-[#5B6BD6] flex items-center gap-1 font-semibold">
                   <Sparkles className="w-3 h-3" /> Migratory Routes
                 </span>
               </div>
@@ -126,20 +126,20 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                       key={dest.name}
                       type="button"
                       onClick={() => handleSelectDest(dest.name)}
-                      className="w-full text-left p-2 rounded-xl hover:bg-[#F8F7F1] flex items-center justify-between group transition-colors"
+                      className="w-full text-left p-2 rounded-xl hover:bg-[#EEF0F8] flex items-center justify-between group transition-colors"
                     >
                       <div className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 rounded-lg bg-stone-100 group-hover:bg-[#173D32] group-hover:text-[#C5A66A] flex items-center justify-center text-stone-600 transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-stone-100 group-hover:bg-[#1B1F4A] group-hover:text-[#F0A92E] flex items-center justify-center text-stone-600 transition-colors">
                           <MapPin className="w-4 h-4" />
                         </div>
                         <div>
-                          <p className="text-xs font-semibold text-[#252A27] group-hover:text-[#173D32]">
+                          <p className="text-xs font-semibold text-[#1B1F4A] group-hover:text-[#1B1F4A]">
                             {dest.name}
                           </p>
                           <p className="text-[10px] text-stone-400">{dest.region}</p>
                         </div>
                       </div>
-                      <span className="text-[10px] text-stone-400 group-hover:text-[#2F7058]">
+                      <span className="text-[10px] text-stone-400 group-hover:text-[#5B6BD6]">
                         {dest.type}
                       </span>
                     </button>
@@ -151,40 +151,40 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
 
         {/* Check-in Field */}
         <div className="flex-1 px-4 py-2 hover:bg-stone-50 rounded-2xl sm:rounded-full transition-colors">
-          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#173D32]">
+          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#1B1F4A]">
             Check-In
           </label>
           <div className="flex items-center gap-2 mt-0.5">
-            <Calendar className="w-4 h-4 text-[#C5A66A] shrink-0" />
+            <Calendar className="w-4 h-4 text-[#F0A92E] shrink-0" />
             <input
               type="date"
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
-              className="text-xs font-medium text-[#252A27] bg-transparent focus:outline-hidden w-full cursor-pointer"
+              className="text-xs font-medium text-[#1B1F4A] bg-transparent focus:outline-hidden w-full cursor-pointer"
             />
           </div>
         </div>
 
         {/* Check-out Field */}
         <div className="flex-1 px-4 py-2 hover:bg-stone-50 rounded-2xl sm:rounded-full transition-colors">
-          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#173D32]">
+          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#1B1F4A]">
             Check-Out
           </label>
           <div className="flex items-center gap-2 mt-0.5">
-            <Calendar className="w-4 h-4 text-[#C5A66A] shrink-0" />
+            <Calendar className="w-4 h-4 text-[#F0A92E] shrink-0" />
             <input
               type="date"
               value={checkOut}
               min={checkIn}
               onChange={(e) => setCheckOut(e.target.value)}
-              className="text-xs font-medium text-[#252A27] bg-transparent focus:outline-hidden w-full cursor-pointer"
+              className="text-xs font-medium text-[#1B1F4A] bg-transparent focus:outline-hidden w-full cursor-pointer"
             />
           </div>
         </div>
 
         {/* Guests Field */}
         <div ref={guestRef} className="relative flex-1 px-4 py-2 hover:bg-stone-50 rounded-2xl sm:rounded-full transition-colors cursor-pointer">
-          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#173D32]">
+          <label className="block text-[11px] font-bold uppercase tracking-wider text-[#1B1F4A]">
             Who
           </label>
           <button
@@ -192,8 +192,8 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
             onClick={() => setGuestPickerOpen(!guestPickerOpen)}
             className="flex items-center gap-2 mt-0.5 text-left w-full"
           >
-            <Users className="w-4 h-4 text-[#C5A66A] shrink-0" />
-            <span className="text-xs font-medium text-[#252A27] truncate">
+            <Users className="w-4 h-4 text-[#F0A92E] shrink-0" />
+            <span className="text-xs font-medium text-[#1B1F4A] truncate">
               {totalGuests} {totalGuests === 1 ? 'Guest' : 'Guests'}
               {infants > 0 ? `, ${infants} ${infants === 1 ? 'infant' : 'infants'}` : ''}
             </span>
@@ -206,7 +206,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                 {/* Adults */}
                 <div className="flex items-center justify-between pb-3 border-b border-stone-100">
                   <div>
-                    <p className="text-xs font-bold text-[#173D32]">Adults</p>
+                    <p className="text-xs font-bold text-[#1B1F4A]">Adults</p>
                     <p className="text-[10px] text-stone-400">Ages 13 and above</p>
                   </div>
                   <div className="flex items-center gap-2.5">
@@ -214,7 +214,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                       type="button"
                       disabled={adults <= 1}
                       onClick={() => setAdults((a) => Math.max(1, a - 1))}
-                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 disabled:opacity-30 disabled:cursor-not-allowed hover:border-[#173D32]"
+                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 disabled:opacity-30 disabled:cursor-not-allowed hover:border-[#1B1F4A]"
                     >
                       <Minus className="w-3 h-3" />
                     </button>
@@ -222,7 +222,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                     <button
                       type="button"
                       onClick={() => setAdults((a) => a + 1)}
-                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-[#173D32]"
+                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-[#1B1F4A]"
                     >
                       <Plus className="w-3 h-3" />
                     </button>
@@ -232,7 +232,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                 {/* Children */}
                 <div className="flex items-center justify-between pb-3 border-b border-stone-100">
                   <div>
-                    <p className="text-xs font-bold text-[#173D32]">Children</p>
+                    <p className="text-xs font-bold text-[#1B1F4A]">Children</p>
                     <p className="text-[10px] text-stone-400">Ages 2–12</p>
                   </div>
                   <div className="flex items-center gap-2.5">
@@ -240,7 +240,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                       type="button"
                       disabled={children <= 0}
                       onClick={() => setChildren((c) => Math.max(0, c - 1))}
-                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 disabled:opacity-30 disabled:cursor-not-allowed hover:border-[#173D32]"
+                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 disabled:opacity-30 disabled:cursor-not-allowed hover:border-[#1B1F4A]"
                     >
                       <Minus className="w-3 h-3" />
                     </button>
@@ -248,7 +248,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                     <button
                       type="button"
                       onClick={() => setChildren((c) => c + 1)}
-                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-[#173D32]"
+                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-[#1B1F4A]"
                     >
                       <Plus className="w-3 h-3" />
                     </button>
@@ -258,7 +258,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                 {/* Infants */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-bold text-[#173D32]">Infants</p>
+                    <p className="text-xs font-bold text-[#1B1F4A]">Infants</p>
                     <p className="text-[10px] text-stone-400">Under 2 years</p>
                   </div>
                   <div className="flex items-center gap-2.5">
@@ -266,7 +266,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                       type="button"
                       disabled={infants <= 0}
                       onClick={() => setInfants((i) => Math.max(0, i - 1))}
-                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 disabled:opacity-30 disabled:cursor-not-allowed hover:border-[#173D32]"
+                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 disabled:opacity-30 disabled:cursor-not-allowed hover:border-[#1B1F4A]"
                     >
                       <Minus className="w-3 h-3" />
                     </button>
@@ -274,7 +274,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                     <button
                       type="button"
                       onClick={() => setInfants((i) => i + 1)}
-                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-[#173D32]"
+                      className="w-7 h-7 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-[#1B1F4A]"
                     >
                       <Plus className="w-3 h-3" />
                     </button>
@@ -286,7 +286,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
                 <button
                   type="button"
                   onClick={() => setGuestPickerOpen(false)}
-                  className="text-xs font-bold text-[#173D32] hover:underline"
+                  className="text-xs font-bold text-[#1B1F4A] hover:underline"
                 >
                   Done
                 </button>
@@ -299,9 +299,9 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({ compact = false }) => {
         <div className="p-1 sm:p-0 sm:pr-1 flex items-center justify-end">
           <button
             type="submit"
-            className="w-full sm:w-auto bg-[#173D32] hover:bg-[#2F7058] text-white p-3.5 sm:px-6 rounded-2xl sm:rounded-full transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#173D32]/25 cursor-pointer font-semibold text-sm group"
+            className="w-full sm:w-auto bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white p-3.5 sm:px-6 rounded-2xl sm:rounded-full transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#1B1F4A]/25 cursor-pointer font-semibold text-sm group"
           >
-            <Search className="w-4 h-4 text-[#C5A66A] group-hover:scale-110 transition-transform" />
+            <Search className="w-4 h-4 text-[#F0A92E] group-hover:scale-110 transition-transform" />
             <span className="sm:inline">Search</span>
           </button>
         </div>

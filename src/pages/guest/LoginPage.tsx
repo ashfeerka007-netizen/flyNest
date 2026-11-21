@@ -34,13 +34,13 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col justify-center items-center p-4">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col justify-center items-center p-4">
       <div className="max-w-md w-full bg-white rounded-3xl p-8 border border-stone-200/90 shadow-xl text-left">
         <div className="text-center mb-6">
           <Link to="/" className="inline-block">
             <BrandLogo size="md" showTagline={true} />
           </Link>
-          <h2 className="font-serif text-2xl font-bold text-[#173D32] mt-4">
+          <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mt-4">
             Welcome to Your Sanctuary
           </h2>
           <p className="text-xs text-stone-500 mt-1">
@@ -49,9 +49,9 @@ export const LoginPage: React.FC = () => {
         </div>
 
         {/* Demo Access Helper Box - Requirement Part 10 */}
-        <div className="mb-6 p-4 rounded-2xl bg-[#173D32]/5 border border-[#173D32]/20">
-          <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#173D32] mb-1.5">
-            <Key className="w-3.5 h-3.5 text-[#C5A66A]" />
+        <div className="mb-6 p-4 rounded-2xl bg-[#1B1F4A]/5 border border-[#1B1F4A]/20">
+          <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1B1F4A] mb-1.5">
+            <Key className="w-3.5 h-3.5 text-[#F0A92E]" />
             <span>1-Click Demo Login</span>
           </div>
           <p className="text-[11px] text-stone-500 mb-3">
@@ -64,7 +64,7 @@ export const LoginPage: React.FC = () => {
               onClick={() => handleQuickDemo('guest')}
               className="p-2 rounded-xl bg-white border border-stone-200 hover:border-emerald-500 text-left transition-all cursor-pointer shadow-2xs"
             >
-              <Compass className="w-3.5 h-3.5 text-[#2F7058] mb-1" />
+              <Compass className="w-3.5 h-3.5 text-[#5B6BD6] mb-1" />
               <p className="text-[11px] font-bold text-stone-800">Guest</p>
               <p className="text-[9px] text-stone-400 font-mono">guest@demo</p>
             </button>
@@ -102,7 +102,7 @@ export const LoginPage: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="e.g. guest@demo.com"
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
             />
           </div>
 
@@ -118,13 +118,13 @@ export const LoginPage: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>Log In to Sanctuary</span>
             <ArrowRight className="w-4 h-4" />
@@ -133,7 +133,7 @@ export const LoginPage: React.FC = () => {
 
         <p className="text-center text-xs text-stone-500 mt-6">
           Don't have an account?{' '}
-          <Link to="/register" className="text-[#2F7058] font-bold hover:underline">
+          <Link to="/register" className="text-[#5B6BD6] font-bold hover:underline">
             Sign up here
           </Link>
         </p>

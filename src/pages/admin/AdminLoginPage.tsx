@@ -27,7 +27,7 @@ export const AdminLoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#252A27] text-white flex flex-col justify-center items-center p-4 text-left">
+    <div className="min-h-screen bg-[#1B1F4A] text-white flex flex-col justify-center items-center p-4 text-left">
       <div className="max-w-md w-full bg-stone-900 rounded-3xl p-8 border border-stone-800 shadow-2xl">
         <div className="text-center mb-6">
           <BrandLogo variant="light" size="md" />
@@ -46,7 +46,7 @@ export const AdminLoginPage: React.FC = () => {
         <div className="mb-6 p-4 rounded-2xl bg-purple-950/40 border border-purple-800/60">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-purple-300 flex items-center gap-1.5 uppercase tracking-wider">
-              <Key className="w-3.5 h-3.5 text-[#C5A66A]" /> Demo Admin Access
+              <Key className="w-3.5 h-3.5 text-[#F0A92E]" /> Demo Admin Access
             </span>
             <span className="text-[10px] font-mono bg-stone-800 px-2 py-0.5 rounded text-stone-300">
               demo123
@@ -58,7 +58,7 @@ export const AdminLoginPage: React.FC = () => {
           <button
             type="button"
             onClick={handleQuickFill}
-            className="w-full bg-[#173D32] hover:bg-[#2F7058] text-[#C5A66A] text-xs font-semibold py-2.5 px-4 rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer border border-[#C5A66A]/40"
+            className="w-full bg-[#1B1F4A] hover:bg-[#5B6BD6] text-[#F0A92E] text-xs font-semibold py-2.5 px-4 rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer border border-[#F0A92E]/40"
           >
             <ShieldCheck className="w-4 h-4" />
             <span>Sign In as Demo Admin ({DEMO_CREDENTIALS.admin.email})</span>
@@ -73,7 +73,7 @@ export const AdminLoginPage: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-700 bg-stone-800 text-white focus:outline-hidden focus:ring-2 focus:ring-[#C5A66A]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-700 bg-stone-800 text-white focus:outline-hidden focus:ring-2 focus:ring-[#F0A92E]"
             />
           </div>
 
@@ -84,13 +84,13 @@ export const AdminLoginPage: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full text-xs p-3 rounded-xl border border-stone-700 bg-stone-800 text-white focus:outline-hidden focus:ring-2 focus:ring-[#C5A66A]"
+              className="w-full text-xs p-3 rounded-xl border border-stone-700 bg-stone-800 text-white focus:outline-hidden focus:ring-2 focus:ring-[#F0A92E]"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer mt-2"
+            className="w-full bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer mt-2"
           >
             <span>Enter Administration Console</span>
             <ArrowRight className="w-4 h-4" />

@@ -24,8 +24,8 @@ export const DemoSwitcher: React.FC = () => {
         <div className="mb-2 w-80 bg-white rounded-2xl shadow-2xl border border-stone-200 p-4 animate-scale-up text-left">
           <div className="flex items-center justify-between pb-3 border-b border-stone-100">
             <div className="flex items-center gap-2">
-              <Key className="w-4 h-4 text-[#C5A66A]" />
-              <span className="font-semibold text-xs tracking-wider uppercase text-[#173D32]">
+              <Key className="w-4 h-4 text-[#F0A92E]" />
+              <span className="font-semibold text-xs tracking-wider uppercase text-[#1B1F4A]">
                 Interactive Demo Switcher
               </span>
             </div>
@@ -44,7 +44,7 @@ export const DemoSwitcher: React.FC = () => {
               onClick={() => handleSelectRole('guest')}
               className={`w-full flex items-center justify-between p-2.5 rounded-xl border text-left transition-all ${
                 currentUser?.role === 'guest'
-                  ? 'bg-emerald-50/70 border-emerald-300 text-[#173D32]'
+                  ? 'bg-emerald-50/70 border-emerald-300 text-[#1B1F4A]'
                   : 'border-stone-100 hover:bg-stone-50 text-stone-700'
               }`}
             >
@@ -65,7 +65,7 @@ export const DemoSwitcher: React.FC = () => {
               onClick={() => handleSelectRole('host')}
               className={`w-full flex items-center justify-between p-2.5 rounded-xl border text-left transition-all ${
                 currentUser?.role === 'host'
-                  ? 'bg-amber-50/70 border-amber-300 text-[#173D32]'
+                  ? 'bg-amber-50/70 border-amber-300 text-[#1B1F4A]'
                   : 'border-stone-100 hover:bg-stone-50 text-stone-700'
               }`}
             >
@@ -86,7 +86,7 @@ export const DemoSwitcher: React.FC = () => {
               onClick={() => handleSelectRole('admin')}
               className={`w-full flex items-center justify-between p-2.5 rounded-xl border text-left transition-all ${
                 currentUser?.role === 'admin'
-                  ? 'bg-purple-50/70 border-purple-300 text-[#173D32]'
+                  ? 'bg-purple-50/70 border-purple-300 text-[#1B1F4A]'
                   : 'border-stone-100 hover:bg-stone-50 text-stone-700'
               }`}
             >
@@ -108,10 +108,10 @@ export const DemoSwitcher: React.FC = () => {
       {/* Floating button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-medium rounded-full shadow-lg border border-[#C5A66A]/30 transition-all hover:scale-105 select-none"
+        className="flex items-center gap-2 px-3 py-2 bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-medium rounded-full shadow-lg border border-[#F0A92E]/30 transition-all hover:scale-105 select-none"
       >
-        <span className="w-2 h-2 rounded-full bg-[#C5A66A] animate-ping" />
-        <UserCheck className="w-3.5 h-3.5 text-[#C5A66A]" />
+        <span className="w-2 h-2 rounded-full bg-[#F0A92E] animate-ping" />
+        <UserCheck className="w-3.5 h-3.5 text-[#F0A92E]" />
         <span>Role: <strong className="capitalize">{currentUser?.role || 'Guest'}</strong></span>
         <ChevronDown className={`w-3.5 h-3.5 text-stone-300 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>

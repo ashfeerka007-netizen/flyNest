@@ -47,7 +47,7 @@ export const Modal: React.FC<ModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-[#173D32]/50 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-[#1B1F4A]/50 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       />
 
@@ -56,9 +56,9 @@ export const Modal: React.FC<ModalProps> = ({
         className={`relative w-full ${maxWidthClasses[maxWidth]} bg-white rounded-2xl shadow-2xl border border-stone-200 z-10 overflow-hidden transform transition-all my-8 animate-scale-up`}
       >
         {(title || subtitle) && (
-          <div className="flex items-start justify-between p-6 border-b border-stone-100 bg-[#F8F7F1]/50">
+          <div className="flex items-start justify-between p-6 border-b border-stone-100 bg-[#EEF0F8]/50">
             <div>
-              {title && <h3 className="font-serif text-xl font-bold text-[#173D32]">{title}</h3>}
+              {title && <h3 className="font-serif text-xl font-bold text-[#1B1F4A]">{title}</h3>}
               {subtitle && <p className="text-xs text-stone-500 mt-1">{subtitle}</p>}
             </div>
             <button

@@ -41,12 +41,12 @@ export const CheckoutPage: React.FC = () => {
 
   if (!property || !pricing) {
     return (
-      <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+      <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
         <Navbar />
         <main className="flex-1 pt-32 pb-16 text-center max-w-md mx-auto px-4">
-          <h2 className="font-serif text-2xl font-bold text-[#173D32]">No Sanctuary Selected</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#1B1F4A]">No Sanctuary Selected</h2>
           <p className="text-xs text-stone-500 mt-2">Please select a sanctuary from our catalog before proceeding to checkout.</p>
-          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#173D32] text-white text-xs font-semibold">
+          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#1B1F4A] text-white text-xs font-semibold">
             Explore Sanctuaries
           </Link>
         </main>
@@ -129,7 +129,7 @@ export const CheckoutPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-16">
@@ -138,12 +138,12 @@ export const CheckoutPage: React.FC = () => {
           <div className="mb-8">
             <Link
               to={`/property/${property.id}`}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-stone-600 hover:text-[#173D32] mb-3"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-stone-600 hover:text-[#1B1F4A] mb-3"
             >
               <ChevronLeft className="w-4 h-4" />
               <span>Back to property</span>
             </Link>
-            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32]">
+            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A]">
               Confirm Your Sanctuary Reservation
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -157,20 +157,20 @@ export const CheckoutPage: React.FC = () => {
               {/* Trip Overview Pill */}
               <div className="p-5 rounded-2xl bg-white border border-stone-200 shadow-xs flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#2F7058]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#5B6BD6]">
                     Selected Dates
                   </span>
-                  <div className="flex items-center gap-2 font-semibold text-sm text-[#173D32] mt-0.5">
-                    <Calendar className="w-4 h-4 text-[#C5A66A]" />
+                  <div className="flex items-center gap-2 font-semibold text-sm text-[#1B1F4A] mt-0.5">
+                    <Calendar className="w-4 h-4 text-[#F0A92E]" />
                     <span>{checkIn} to {checkOut} ({pricing.nights} {pricing.nights === 1 ? 'night' : 'nights'})</span>
                   </div>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#2F7058]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#5B6BD6]">
                     Occupancy
                   </span>
-                  <div className="flex items-center gap-2 font-semibold text-sm text-[#173D32] mt-0.5">
-                    <Users className="w-4 h-4 text-[#C5A66A]" />
+                  <div className="flex items-center gap-2 font-semibold text-sm text-[#1B1F4A] mt-0.5">
+                    <Users className="w-4 h-4 text-[#F0A92E]" />
                     <span>{guestsCount} Guests</span>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export const CheckoutPage: React.FC = () => {
 
               {/* Guest Information */}
               <div className="p-6 rounded-2xl bg-white border border-stone-200 shadow-xs">
-                <h3 className="font-serif text-lg font-bold text-[#173D32] mb-4">
+                <h3 className="font-serif text-lg font-bold text-[#1B1F4A] mb-4">
                   1. Traveler Contact Details
                 </h3>
 
@@ -192,7 +192,7 @@ export const CheckoutPage: React.FC = () => {
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       required
-                      className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32] bg-[#F8F7F1]/30"
+                      className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A] bg-[#EEF0F8]/30"
                       placeholder="e.g. Aarav Mehta"
                     />
                   </div>
@@ -207,7 +207,7 @@ export const CheckoutPage: React.FC = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32] bg-[#F8F7F1]/30"
+                        className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A] bg-[#EEF0F8]/30"
                         placeholder="guest@demo.com"
                       />
                     </div>
@@ -220,7 +220,7 @@ export const CheckoutPage: React.FC = () => {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         required
-                        className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32] bg-[#F8F7F1]/30"
+                        className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A] bg-[#EEF0F8]/30"
                         placeholder="+91 98201 44589"
                       />
                     </div>
@@ -235,7 +235,7 @@ export const CheckoutPage: React.FC = () => {
                       value={specialRequests}
                       onChange={(e) => setSpecialRequests(e.target.value)}
                       placeholder="E.g., early arrival by mountain cab, dietary restrictions for tea..."
-                      className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32] bg-[#F8F7F1]/30"
+                      className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A] bg-[#EEF0F8]/30"
                     />
                   </div>
                 </div>
@@ -244,7 +244,7 @@ export const CheckoutPage: React.FC = () => {
               {/* Simulated Payment Experience */}
               <div className="p-6 rounded-2xl bg-white border border-stone-200 shadow-xs">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-serif text-lg font-bold text-[#173D32]">
+                  <h3 className="font-serif text-lg font-bold text-[#1B1F4A]">
                     2. Simulated Payment Method
                   </h3>
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
@@ -267,11 +267,11 @@ export const CheckoutPage: React.FC = () => {
                     onClick={() => setPaymentMethod('card')}
                     className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
                       paymentMethod === 'card'
-                        ? 'border-[#173D32] bg-[#173D32]/5 text-[#173D32] ring-1 ring-[#173D32]'
+                        ? 'border-[#1B1F4A] bg-[#1B1F4A]/5 text-[#1B1F4A] ring-1 ring-[#1B1F4A]'
                         : 'border-stone-200 text-stone-600 hover:bg-stone-50'
                     }`}
                   >
-                    <CreditCard className="w-5 h-5 text-[#2F7058]" />
+                    <CreditCard className="w-5 h-5 text-[#5B6BD6]" />
                     <span>Credit Card</span>
                   </button>
 
@@ -280,11 +280,11 @@ export const CheckoutPage: React.FC = () => {
                     onClick={() => setPaymentMethod('upi')}
                     className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
                       paymentMethod === 'upi'
-                        ? 'border-[#173D32] bg-[#173D32]/5 text-[#173D32] ring-1 ring-[#173D32]'
+                        ? 'border-[#1B1F4A] bg-[#1B1F4A]/5 text-[#1B1F4A] ring-1 ring-[#1B1F4A]'
                         : 'border-stone-200 text-stone-600 hover:bg-stone-50'
                     }`}
                   >
-                    <QrCode className="w-5 h-5 text-[#2F7058]" />
+                    <QrCode className="w-5 h-5 text-[#5B6BD6]" />
                     <span>UPI / QR</span>
                   </button>
 
@@ -293,11 +293,11 @@ export const CheckoutPage: React.FC = () => {
                     onClick={() => setPaymentMethod('netbanking')}
                     className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
                       paymentMethod === 'netbanking'
-                        ? 'border-[#173D32] bg-[#173D32]/5 text-[#173D32] ring-1 ring-[#173D32]'
+                        ? 'border-[#1B1F4A] bg-[#1B1F4A]/5 text-[#1B1F4A] ring-1 ring-[#1B1F4A]'
                         : 'border-stone-200 text-stone-600 hover:bg-stone-50'
                     }`}
                   >
-                    <Building className="w-5 h-5 text-[#2F7058]" />
+                    <Building className="w-5 h-5 text-[#5B6BD6]" />
                     <span>Net Banking</span>
                   </button>
 
@@ -306,11 +306,11 @@ export const CheckoutPage: React.FC = () => {
                     onClick={() => setPaymentMethod('wallet')}
                     className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
                       paymentMethod === 'wallet'
-                        ? 'border-[#173D32] bg-[#173D32]/5 text-[#173D32] ring-1 ring-[#173D32]'
+                        ? 'border-[#1B1F4A] bg-[#1B1F4A]/5 text-[#1B1F4A] ring-1 ring-[#1B1F4A]'
                         : 'border-stone-200 text-stone-600 hover:bg-stone-50'
                     }`}
                   >
-                    <Wallet className="w-5 h-5 text-[#2F7058]" />
+                    <Wallet className="w-5 h-5 text-[#5B6BD6]" />
                     <span>Digital Wallet</span>
                   </button>
                 </div>
@@ -396,9 +396,9 @@ export const CheckoutPage: React.FC = () => {
                 )}
 
                 {/* Simulated Success / Failure Toggle */}
-                <div className="mt-5 p-3 rounded-xl bg-[#F8F7F1] border border-stone-200 flex items-center justify-between text-xs">
+                <div className="mt-5 p-3 rounded-xl bg-[#EEF0F8] border border-stone-200 flex items-center justify-between text-xs">
                   <div>
-                    <p className="font-semibold text-[#173D32]">Simulate Payment Failure?</p>
+                    <p className="font-semibold text-[#1B1F4A]">Simulate Payment Failure?</p>
                     <p className="text-[10px] text-stone-500">Toggle to test the payment error scenario</p>
                   </div>
                   <input
@@ -417,11 +417,11 @@ export const CheckoutPage: React.FC = () => {
                     type="checkbox"
                     checked={agreeTerms}
                     onChange={(e) => setAgreeTerms(e.target.checked)}
-                    className="w-4 h-4 accent-[#173D32] rounded shrink-0 mt-0.5"
+                    className="w-4 h-4 accent-[#1B1F4A] rounded shrink-0 mt-0.5"
                   />
                   <span className="text-stone-600 leading-relaxed">
-                    I agree to the <strong className="text-[#173D32]">House Rules</strong>, the{' '}
-                    <strong className="text-[#173D32]">{property.cancellationPolicy} Cancellation Policy</strong>, and honor the sanctuary quiet hours.
+                    I agree to the <strong className="text-[#1B1F4A]">House Rules</strong>, the{' '}
+                    <strong className="text-[#1B1F4A]">{property.cancellationPolicy} Cancellation Policy</strong>, and honor the sanctuary quiet hours.
                   </span>
                 </label>
               </div>
@@ -431,13 +431,13 @@ export const CheckoutPage: React.FC = () => {
                 type="button"
                 onClick={handleCompleteBooking}
                 disabled={isProcessing}
-                className="w-full bg-[#173D32] hover:bg-[#2F7058] text-white font-semibold py-4 px-6 rounded-2xl transition-all shadow-xl shadow-[#173D32]/25 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 text-sm group"
+                className="w-full bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white font-semibold py-4 px-6 rounded-2xl transition-all shadow-xl shadow-[#1B1F4A]/25 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 text-sm group"
               >
                 {isProcessing ? (
                   <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 ) : (
                   <>
-                    <Sparkles className="w-4 h-4 text-[#C5A66A] group-hover:scale-110 transition-transform" />
+                    <Sparkles className="w-4 h-4 text-[#F0A92E] group-hover:scale-110 transition-transform" />
                     <span>Complete Simulated Reservation • {BRAND.currency.symbol}{pricing.grandTotal.toLocaleString()}</span>
                   </>
                 )}
@@ -456,20 +456,20 @@ export const CheckoutPage: React.FC = () => {
                     onError={handleImageError}
                   />
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#C5A66A] bg-[#173D32] px-2 py-0.5 rounded-md">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#F0A92E] bg-[#1B1F4A] px-2 py-0.5 rounded-md">
                       {property.category}
                     </span>
-                    <h4 className="font-serif text-base font-bold text-[#173D32] mt-1 line-clamp-1">
+                    <h4 className="font-serif text-base font-bold text-[#1B1F4A] mt-1 line-clamp-1">
                       {property.title}
                     </h4>
                     <p className="text-xs text-stone-500 truncate">{property.location.city}, {property.location.country}</p>
-                    <p className="text-xs text-[#2F7058] font-semibold mt-1">Hosted by {property.host.name}</p>
+                    <p className="text-xs text-[#5B6BD6] font-semibold mt-1">Hosted by {property.host.name}</p>
                   </div>
                 </div>
 
                 {/* Price Breakdown */}
                 <div className="space-y-3 text-xs">
-                  <h4 className="font-serif text-sm font-bold text-[#173D32]">
+                  <h4 className="font-serif text-sm font-bold text-[#1B1F4A]">
                     Price Breakdown
                   </h4>
 
@@ -477,28 +477,28 @@ export const CheckoutPage: React.FC = () => {
                     <span>
                       {BRAND.currency.symbol}{property.pricePerNight.toLocaleString()} × {pricing.nights} {pricing.nights === 1 ? 'night' : 'nights'}
                     </span>
-                    <span className="font-semibold text-[#173D32]">
+                    <span className="font-semibold text-[#1B1F4A]">
                       {BRAND.currency.symbol}{pricing.baseTotal.toLocaleString()}
                     </span>
                   </div>
 
                   <div className="flex justify-between text-stone-600">
                     <span>Sanctuary Cleaning & Linen Prep</span>
-                    <span className="font-semibold text-[#173D32]">
+                    <span className="font-semibold text-[#1B1F4A]">
                       {BRAND.currency.symbol}{pricing.cleaningFee.toLocaleString()}
                     </span>
                   </div>
 
                   <div className="flex justify-between text-stone-600">
                     <span>Platform Service Fee</span>
-                    <span className="font-semibold text-[#173D32]">
+                    <span className="font-semibold text-[#1B1F4A]">
                       {BRAND.currency.symbol}{pricing.serviceFee.toLocaleString()}
                     </span>
                   </div>
 
                   <div className="flex justify-between text-stone-600">
                     <span>Hospitality GST & Local Taxes (12%)</span>
-                    <span className="font-semibold text-[#173D32]">
+                    <span className="font-semibold text-[#1B1F4A]">
                       {BRAND.currency.symbol}{pricing.taxes.toLocaleString()}
                     </span>
                   </div>
@@ -510,7 +510,7 @@ export const CheckoutPage: React.FC = () => {
                     </div>
                   )}
 
-                  <div className="pt-4 border-t border-stone-200 flex items-center justify-between text-sm font-bold text-[#173D32]">
+                  <div className="pt-4 border-t border-stone-200 flex items-center justify-between text-sm font-bold text-[#1B1F4A]">
                     <span>Total Amount (INR)</span>
                     <span className="text-xl font-serif">
                       {BRAND.currency.symbol}{pricing.grandTotal.toLocaleString()}
@@ -519,8 +519,8 @@ export const CheckoutPage: React.FC = () => {
                 </div>
 
                 {/* Cancellation Policy Pill */}
-                <div className="p-4 rounded-2xl bg-[#F8F7F1] border border-stone-200 text-xs text-stone-600 space-y-1">
-                  <div className="flex items-center gap-1.5 font-bold text-[#173D32]">
+                <div className="p-4 rounded-2xl bg-[#EEF0F8] border border-stone-200 text-xs text-stone-600 space-y-1">
+                  <div className="flex items-center gap-1.5 font-bold text-[#1B1F4A]">
                     <ShieldCheck className="w-4 h-4 text-emerald-600" />
                     <span>{property.cancellationPolicy} Cancellation</span>
                   </div>

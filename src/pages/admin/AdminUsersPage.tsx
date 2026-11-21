@@ -46,7 +46,7 @@ export const AdminUsersPage: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider text-purple-700">
               Community Governance
             </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               User Directory ({users.length})
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -63,7 +63,7 @@ export const AdminUsersPage: React.FC = () => {
                 key={r}
                 onClick={() => setRoleFilter(r)}
                 className={`text-xs font-semibold px-3 py-1.5 rounded-xl capitalize transition-colors cursor-pointer ${
-                  roleFilter === r ? 'bg-[#173D32] text-white' : 'text-stone-600 hover:bg-stone-100'
+                  roleFilter === r ? 'bg-[#1B1F4A] text-white' : 'text-stone-600 hover:bg-stone-100'
                 }`}
               >
                 {r}
@@ -88,7 +88,7 @@ export const AdminUsersPage: React.FC = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-xs text-left">
               <thead>
-                <tr className="border-b border-stone-200 bg-[#F8F7F1]/60 text-stone-400 uppercase tracking-wider text-[10px]">
+                <tr className="border-b border-stone-200 bg-[#EEF0F8]/60 text-stone-400 uppercase tracking-wider text-[10px]">
                   <th className="py-3.5 px-4">User</th>
                   <th className="py-3.5 px-4">Role</th>
                   <th className="py-3.5 px-4">Joined</th>
@@ -116,7 +116,7 @@ export const AdminUsersPage: React.FC = () => {
                       </div>
                     </td>
                     <td className="py-3.5 px-4">
-                      <span className="capitalize font-semibold text-[#173D32] bg-[#173D32]/10 px-2 py-0.5 rounded text-[10px]">
+                      <span className="capitalize font-semibold text-[#1B1F4A] bg-[#1B1F4A]/10 px-2 py-0.5 rounded text-[10px]">
                         {u.role}
                       </span>
                     </td>

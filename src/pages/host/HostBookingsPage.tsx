@@ -40,10 +40,10 @@ export const HostBookingsPage: React.FC = () => {
       <div className="space-y-8 text-left pb-16">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-stone-200">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#5B6BD6]">
               Guest Reservations
             </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               Host Bookings ({bookings.length})
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -61,7 +61,7 @@ export const HostBookingsPage: React.FC = () => {
                 onClick={() => setFilterStatus(st)}
                 className={`text-xs font-semibold px-3 py-1.5 rounded-xl capitalize transition-colors cursor-pointer shrink-0 ${
                   filterStatus === st
-                    ? 'bg-[#173D32] text-white'
+                    ? 'bg-[#1B1F4A] text-white'
                     : 'text-stone-600 hover:bg-stone-100'
                 }`}
               >
@@ -87,7 +87,7 @@ export const HostBookingsPage: React.FC = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-xs text-left">
               <thead>
-                <tr className="border-b border-stone-200 bg-[#F8F7F1]/60 text-stone-400 uppercase tracking-wider text-[10px]">
+                <tr className="border-b border-stone-200 bg-[#EEF0F8]/60 text-stone-400 uppercase tracking-wider text-[10px]">
                   <th className="py-3.5 px-4">Booking Ref</th>
                   <th className="py-3.5 px-4">Property</th>
                   <th className="py-3.5 px-4">Guest</th>
@@ -100,7 +100,7 @@ export const HostBookingsPage: React.FC = () => {
               <tbody className="divide-y divide-stone-100">
                 {filtered.map((b) => (
                   <tr key={b.id} className="hover:bg-stone-50 transition-colors">
-                    <td className="py-3.5 px-4 font-mono font-bold text-[#173D32]">
+                    <td className="py-3.5 px-4 font-mono font-bold text-[#1B1F4A]">
                       {b.referenceNumber}
                     </td>
                     <td className="py-3.5 px-4 font-semibold text-stone-800 max-w-[200px] truncate">
@@ -115,7 +115,7 @@ export const HostBookingsPage: React.FC = () => {
                     <td className="py-3.5 px-4 font-mono text-stone-600">
                       {b.checkIn} → {b.checkOut}
                     </td>
-                    <td className="py-3.5 px-4 font-bold text-[#173D32]">
+                    <td className="py-3.5 px-4 font-bold text-[#1B1F4A]">
                       ₹{b.pricing.grandTotal.toLocaleString()}
                     </td>
                     <td className="py-3.5 px-4">
@@ -153,7 +153,7 @@ export const HostBookingsPage: React.FC = () => {
               <div className="flex items-center justify-between pb-4 border-b border-stone-100">
                 <div>
                   <span className="text-[10px] font-bold uppercase text-stone-400">Reservation Dossier</span>
-                  <h3 className="font-mono text-lg font-bold text-[#173D32]">
+                  <h3 className="font-mono text-lg font-bold text-[#1B1F4A]">
                     {activeReservation.referenceNumber}
                   </h3>
                 </div>
@@ -177,12 +177,12 @@ export const HostBookingsPage: React.FC = () => {
               <div className="pt-3 border-t border-stone-100 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] text-stone-400 uppercase font-bold block">Gross Amount</span>
-                  <span className="text-base font-bold text-[#173D32]">₹{activeReservation.pricing.grandTotal.toLocaleString()}</span>
+                  <span className="text-base font-bold text-[#1B1F4A]">₹{activeReservation.pricing.grandTotal.toLocaleString()}</span>
                 </div>
                 <button
                   type="button"
                   onClick={() => setActiveReservation(null)}
-                  className="px-4 py-2 bg-[#173D32] text-white text-xs font-semibold rounded-xl"
+                  className="px-4 py-2 bg-[#1B1F4A] text-white text-xs font-semibold rounded-xl"
                 >
                   Close
                 </button>

@@ -20,7 +20,7 @@ export const AdminSettingsPage: React.FC = () => {
       <div className="max-w-2xl mx-auto space-y-8 text-left pb-16">
         <div className="pb-6 border-b border-stone-200">
           <span className="text-xs font-bold uppercase tracking-wider text-purple-700">Platform Environment</span>
-          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">System Settings</h1>
+          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">System Settings</h1>
           <p className="text-xs text-stone-500 mt-1">Configure global platform metadata, security rules and email notifications</p>
         </div>
 
@@ -51,7 +51,7 @@ export const AdminSettingsPage: React.FC = () => {
                 type="checkbox"
                 checked={requireHostApproval}
                 onChange={(e) => setRequireHostApproval(e.target.checked)}
-                className="w-4 h-4 accent-[#173D32]"
+                className="w-4 h-4 accent-[#1B1F4A]"
               />
               <span className="font-semibold text-stone-700">
                 Mandatory Admin Listing Verification prior to public publication
@@ -62,7 +62,7 @@ export const AdminSettingsPage: React.FC = () => {
           <div className="pt-4 border-t border-stone-100 flex justify-end">
             <button
               type="submit"
-              className="bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold px-6 py-3 rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
+              className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold px-6 py-3 rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
             >
               <Save className="w-4 h-4" />
               <span>Save System Settings</span>

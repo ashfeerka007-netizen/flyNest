@@ -44,7 +44,7 @@ export const AdminPropertiesPage: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider text-purple-700">
               Inventory Oversight
             </span>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">
               All Properties ({properties.length})
             </h1>
             <p className="text-xs text-stone-500 mt-1">
@@ -62,7 +62,7 @@ export const AdminPropertiesPage: React.FC = () => {
                 onClick={() => setFilterStatus(st)}
                 className={`text-xs font-semibold px-3 py-1.5 rounded-xl capitalize transition-colors cursor-pointer shrink-0 ${
                   filterStatus === st
-                    ? 'bg-[#173D32] text-white'
+                    ? 'bg-[#1B1F4A] text-white'
                     : 'text-stone-600 hover:bg-stone-100'
                 }`}
               >
@@ -88,7 +88,7 @@ export const AdminPropertiesPage: React.FC = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-xs text-left">
               <thead>
-                <tr className="border-b border-stone-200 bg-[#F8F7F1]/60 text-stone-400 uppercase tracking-wider text-[10px]">
+                <tr className="border-b border-stone-200 bg-[#EEF0F8]/60 text-stone-400 uppercase tracking-wider text-[10px]">
                   <th className="py-3.5 px-4">Property</th>
                   <th className="py-3.5 px-4">Category</th>
                   <th className="py-3.5 px-4">Location</th>
@@ -110,7 +110,7 @@ export const AdminPropertiesPage: React.FC = () => {
                           onError={handleImageError}
                         />
                         <div className="max-w-[200px]">
-                          <Link to={`/property/${p.id}`} className="font-bold text-stone-800 hover:text-[#173D32] truncate block">
+                          <Link to={`/property/${p.id}`} className="font-bold text-stone-800 hover:text-[#1B1F4A] truncate block">
                             {p.title}
                           </Link>
                           <span className="text-[10px] text-stone-400">{p.maxGuests} Guests • {p.bedrooms} Beds</span>
@@ -120,7 +120,7 @@ export const AdminPropertiesPage: React.FC = () => {
                     <td className="py-3.5 px-4 font-semibold text-stone-700">{p.category}</td>
                     <td className="py-3.5 px-4">{p.location.city}, {p.location.country}</td>
                     <td className="py-3.5 px-4">{p.host.name}</td>
-                    <td className="py-3.5 px-4 font-bold text-[#173D32]">
+                    <td className="py-3.5 px-4 font-bold text-[#1B1F4A]">
                       {BRAND.currency.symbol}{p.pricePerNight.toLocaleString()}
                     </td>
                     <td className="py-3.5 px-4">

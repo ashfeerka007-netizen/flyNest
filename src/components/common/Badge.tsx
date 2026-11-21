@@ -33,9 +33,9 @@ export const Badge: React.FC<BadgeProps> = ({
     pending: 'bg-amber-50 text-amber-800 border border-amber-300 font-medium animate-pulse',
     rejected: 'bg-rose-50 text-rose-800 border border-rose-300 font-medium',
     cancelled: 'bg-stone-100 text-stone-600 border border-stone-200 font-medium',
-    superhost: 'bg-[#C5A66A]/15 text-[#173D32] border border-[#C5A66A]/40 font-semibold',
-    gold: 'bg-[#C5A66A] text-[#173D32] font-semibold',
-    default: 'bg-stone-100 text-[#252A27] border border-stone-200',
+    superhost: 'bg-[#F0A92E]/15 text-[#1B1F4A] border border-[#F0A92E]/40 font-semibold',
+    gold: 'bg-[#F0A92E] text-[#1B1F4A] font-semibold',
+    default: 'bg-stone-100 text-[#1B1F4A] border border-stone-200',
   };
 
   return (

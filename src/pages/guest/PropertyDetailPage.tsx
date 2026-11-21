@@ -54,12 +54,12 @@ export const PropertyDetailPage: React.FC = () => {
 
   if (!property) {
     return (
-      <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+      <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
         <Navbar />
         <main className="flex-1 pt-32 pb-16 text-center max-w-md mx-auto px-4">
-          <h2 className="font-serif text-2xl font-bold text-[#173D32]">Sanctuary Not Found</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#1B1F4A]">Sanctuary Not Found</h2>
           <p className="text-xs text-stone-500 mt-2">The requested accommodation could not be located along this corridor.</p>
-          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#173D32] text-white text-xs font-semibold">
+          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#1B1F4A] text-white text-xs font-semibold">
             Explore All Sanctuaries
           </Link>
         </main>
@@ -98,7 +98,7 @@ export const PropertyDetailPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-16">
@@ -106,17 +106,17 @@ export const PropertyDetailPage: React.FC = () => {
           {/* Breadcrumb & Navigation */}
           <div className="flex items-center justify-between text-xs text-stone-500 mb-4">
             <div className="flex items-center gap-1.5">
-              <Link to="/" className="hover:text-[#173D32]">Home</Link>
+              <Link to="/" className="hover:text-[#1B1F4A]">Home</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <Link to="/explore" className="hover:text-[#173D32]">Explore</Link>
+              <Link to="/explore" className="hover:text-[#1B1F4A]">Explore</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-[#2F7058] font-medium truncate max-w-[200px]">{property.title}</span>
+              <span className="text-[#5B6BD6] font-medium truncate max-w-[200px]">{property.title}</span>
             </div>
 
             <div className="flex items-center gap-3">
               <button
                 onClick={handleShare}
-                className="flex items-center gap-1 text-xs font-semibold text-stone-700 hover:text-[#173D32] bg-white px-3 py-1.5 rounded-full border border-stone-200 transition-colors"
+                className="flex items-center gap-1 text-xs font-semibold text-stone-700 hover:text-[#1B1F4A] bg-white px-3 py-1.5 rounded-full border border-stone-200 transition-colors"
               >
                 <Share2 className="w-3.5 h-3.5" />
                 <span>Share</span>
@@ -138,10 +138,10 @@ export const PropertyDetailPage: React.FC = () => {
 
           {/* Title & Location Header */}
           <div className="mb-6">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C5A66A] bg-[#173D32] px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#F0A92E] bg-[#1B1F4A] px-3 py-1 rounded-full">
               {property.category}
             </span>
-            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#173D32] mt-2">
+            <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#1B1F4A] mt-2">
               {property.title}
             </h1>
             <p className="text-sm sm:text-base text-stone-600 mt-1 italic font-serif">
@@ -149,20 +149,20 @@ export const PropertyDetailPage: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-xs text-stone-600 mt-3">
-              <span className="flex items-center gap-1 font-semibold text-[#173D32]">
+              <span className="flex items-center gap-1 font-semibold text-[#1B1F4A]">
                 <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
                 <span>{property.rating}</span>
                 <span className="text-stone-400 font-normal">({property.reviewCount} reviews)</span>
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1 text-[#2F7058] font-medium">
+              <span className="flex items-center gap-1 text-[#5B6BD6] font-medium">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{property.location.address}</span>
               </span>
               {property.host.isSuperhost && (
                 <>
                   <span>•</span>
-                  <span className="flex items-center gap-1 text-[#C5A66A] font-semibold">
+                  <span className="flex items-center gap-1 text-[#F0A92E] font-semibold">
                     <Sparkles className="w-3 h-3" /> Superhost Curation
                   </span>
                 </>
@@ -225,13 +225,13 @@ export const PropertyDetailPage: React.FC = () => {
                 <img
                   src={property.host.avatar}
                   alt={property.host.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-[#C5A66A]"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-[#F0A92E]"
                   onError={handleAvatarError}
                 />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-serif text-lg font-bold text-[#173D32]">
+                      <h3 className="font-serif text-lg font-bold text-[#1B1F4A]">
                         Hosted by {property.host.name}
                       </h3>
                       <p className="text-xs text-stone-500">
@@ -239,8 +239,8 @@ export const PropertyDetailPage: React.FC = () => {
                       </p>
                     </div>
                     {property.host.isSuperhost && (
-                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#C5A66A]/20 text-[#173D32] border border-[#C5A66A]/40 flex items-center gap-1">
-                        <Sparkles className="w-3 h-3 text-[#C5A66A]" /> Superhost
+                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#F0A92E]/20 text-[#1B1F4A] border border-[#F0A92E]/40 flex items-center gap-1">
+                        <Sparkles className="w-3 h-3 text-[#F0A92E]" /> Superhost
                       </span>
                     )}
                   </div>
@@ -253,25 +253,25 @@ export const PropertyDetailPage: React.FC = () => {
               {/* Property Capacity & Quick Specs */}
               <div className="grid grid-cols-3 gap-4 p-5 rounded-2xl bg-stone-100/70 border border-stone-200 text-center">
                 <div className="flex flex-col items-center gap-1">
-                  <Users className="w-5 h-5 text-[#2F7058]" />
-                  <span className="text-xs font-bold text-[#173D32]">Up to {property.maxGuests} Guests</span>
+                  <Users className="w-5 h-5 text-[#5B6BD6]" />
+                  <span className="text-xs font-bold text-[#1B1F4A]">Up to {property.maxGuests} Guests</span>
                   <span className="text-[10px] text-stone-400">Restful sanctuary</span>
                 </div>
                 <div className="flex flex-col items-center gap-1">
-                  <Bed className="w-5 h-5 text-[#2F7058]" />
-                  <span className="text-xs font-bold text-[#173D32]">{property.bedrooms} Bedrooms</span>
+                  <Bed className="w-5 h-5 text-[#5B6BD6]" />
+                  <span className="text-xs font-bold text-[#1B1F4A]">{property.bedrooms} Bedrooms</span>
                   <span className="text-[10px] text-stone-400">{property.beds} Luxury Beds</span>
                 </div>
                 <div className="flex flex-col items-center gap-1">
-                  <Bath className="w-5 h-5 text-[#2F7058]" />
-                  <span className="text-xs font-bold text-[#173D32]">{property.bathrooms} Bathrooms</span>
+                  <Bath className="w-5 h-5 text-[#5B6BD6]" />
+                  <span className="text-xs font-bold text-[#1B1F4A]">{property.bathrooms} Bathrooms</span>
                   <span className="text-[10px] text-stone-400">Spring-fed baths</span>
                 </div>
               </div>
 
               {/* Editorial Description */}
               <div>
-                <h3 className="font-serif text-xl font-bold text-[#173D32] mb-3">
+                <h3 className="font-serif text-xl font-bold text-[#1B1F4A] mb-3">
                   About this Sanctuary
                 </h3>
                 <p className="text-sm text-stone-700 leading-relaxed font-light whitespace-pre-line">
@@ -283,7 +283,7 @@ export const PropertyDetailPage: React.FC = () => {
 
               {/* Amenities */}
               <div>
-                <h3 className="font-serif text-xl font-bold text-[#173D32] mb-4">
+                <h3 className="font-serif text-xl font-bold text-[#1B1F4A] mb-4">
                   Sanctuary Amenities
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -295,7 +295,7 @@ export const PropertyDetailPage: React.FC = () => {
                         key={amenityKey}
                         className="flex items-center gap-3 p-3 rounded-xl bg-white border border-stone-200/80"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-[#173D32]/10 text-[#173D32] flex items-center justify-center shrink-0">
+                        <div className="w-8 h-8 rounded-lg bg-[#1B1F4A]/10 text-[#1B1F4A] flex items-center justify-center shrink-0">
                           <Icon className="w-4 h-4" />
                         </div>
                         <span className="text-xs font-medium text-stone-800">{info.label}</span>
@@ -309,17 +309,17 @@ export const PropertyDetailPage: React.FC = () => {
 
               {/* House Rules & Policies */}
               <div>
-                <h3 className="font-serif text-xl font-bold text-[#173D32] mb-4">
+                <h3 className="font-serif text-xl font-bold text-[#1B1F4A] mb-4">
                   Sanctuary Etiquette & Rules
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                   <div className="p-4 rounded-xl bg-white border border-stone-200 space-y-2">
-                    <div className="flex items-center gap-2 text-[#173D32] font-semibold">
-                      <Clock className="w-4 h-4 text-[#C5A66A]" />
+                    <div className="flex items-center gap-2 text-[#1B1F4A] font-semibold">
+                      <Clock className="w-4 h-4 text-[#F0A92E]" />
                       <span>Check-in: After {property.houseRules.checkIn}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-[#173D32] font-semibold">
-                      <Clock className="w-4 h-4 text-[#C5A66A]" />
+                    <div className="flex items-center gap-2 text-[#1B1F4A] font-semibold">
+                      <Clock className="w-4 h-4 text-[#F0A92E]" />
                       <span>Check-out: Before {property.houseRules.checkOut}</span>
                     </div>
                   </div>
@@ -336,7 +336,7 @@ export const PropertyDetailPage: React.FC = () => {
 
               {/* Location Map Section */}
               <div>
-                <h3 className="font-serif text-xl font-bold text-[#173D32] mb-2">
+                <h3 className="font-serif text-xl font-bold text-[#1B1F4A] mb-2">
                   Location & Surroundings
                 </h3>
                 <p className="text-xs text-stone-500 mb-4">
@@ -350,9 +350,9 @@ export const PropertyDetailPage: React.FC = () => {
                     className="w-full h-full object-cover filter contrast-125 opacity-70"
                     onError={handleImageError}
                   />
-                  <div className="absolute inset-0 bg-[#173D32]/30 flex items-center justify-center">
-                    <div className="bg-white/95 px-4 py-2 rounded-full shadow-xl border border-stone-200 flex items-center gap-2 text-xs font-bold text-[#173D32]">
-                      <MapPin className="w-4 h-4 text-[#C5A66A]" />
+                  <div className="absolute inset-0 bg-[#1B1F4A]/30 flex items-center justify-center">
+                    <div className="bg-white/95 px-4 py-2 rounded-full shadow-xl border border-stone-200 flex items-center gap-2 text-xs font-bold text-[#1B1F4A]">
+                      <MapPin className="w-4 h-4 text-[#F0A92E]" />
                       <span>{property.location.city}, {property.location.state}</span>
                     </div>
                   </div>
@@ -368,7 +368,7 @@ export const PropertyDetailPage: React.FC = () => {
 
           {/* Similar Sanctuaries Recommendations */}
           <div className="mt-20 pt-12 border-t border-stone-200">
-            <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-6">
+            <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-6">
               Similar Sanctuaries You Might Like
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -410,7 +410,7 @@ export const PropertyDetailPage: React.FC = () => {
                 key={i}
                 onClick={() => setActivePhotoIndex(i)}
                 className={`w-16 h-12 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${
-                  activePhotoIndex === i ? 'border-[#C5A66A] scale-105' : 'border-transparent opacity-60'
+                  activePhotoIndex === i ? 'border-[#F0A92E] scale-105' : 'border-transparent opacity-60'
                 }`}
               >
                 <img src={img} alt="thumb" className="w-full h-full object-cover" onError={handleImageError} />

@@ -29,8 +29,8 @@ export const HostReviewsPage: React.FC = () => {
     <HostLayout>
       <div className="space-y-8 text-left pb-16">
         <div className="pb-6 border-b border-stone-200">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#2F7058]">Guest Feedback</span>
-          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">Guest Reviews</h1>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#5B6BD6]">Guest Feedback</span>
+          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">Guest Reviews</h1>
           <p className="text-xs text-stone-500 mt-1">Verified traveler feedback across your listings</p>
         </div>
 
@@ -41,7 +41,7 @@ export const HostReviewsPage: React.FC = () => {
                 <div className="flex items-center gap-3">
                   <img src={rev.avatar} alt={rev.guest} className="w-10 h-10 rounded-full object-cover" onError={handleAvatarError} />
                   <div>
-                    <h4 className="font-bold text-sm text-[#173D32]">{rev.guest}</h4>
+                    <h4 className="font-bold text-sm text-[#1B1F4A]">{rev.guest}</h4>
                     <p className="text-[10px] text-stone-400">{rev.property} • {rev.date}</p>
                   </div>
                 </div>

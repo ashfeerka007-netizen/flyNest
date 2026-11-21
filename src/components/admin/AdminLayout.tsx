@@ -57,7 +57,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex text-[#252A27]">
+    <div className="min-h-screen bg-[#EEF0F8] flex text-[#1B1F4A]">
       {/* Mobile Backdrop */}
       {sidebarOpen && (
         <div
@@ -68,7 +68,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
 
       {/* Admin Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-[#252A27] text-white flex flex-col justify-between transform transition-transform duration-300 lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-[#1B1F4A] text-white flex flex-col justify-between transform transition-transform duration-300 lg:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -78,7 +78,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
             <Link to="/admin/dashboard" className="flex items-center gap-2">
               <BrandLogo variant="light" size="sm" />
               <div>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-[#C5A66A] block">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#F0A92E] block">
                   Administration
                 </span>
               </div>
@@ -96,13 +96,13 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
             <img
               src={currentUser?.avatar || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80'}
               alt="Admin"
-              className="w-10 h-10 rounded-full object-cover border border-[#C5A66A]/60"
+              className="w-10 h-10 rounded-full object-cover border border-[#F0A92E]/60"
               onError={handleAvatarError}
             />
             <div className="overflow-hidden">
               <div className="flex items-center gap-1">
                 <p className="text-xs font-bold text-white truncate">{currentUser?.name || 'Vikramaditya Rao'}</p>
-                <Sparkles className="w-3 h-3 text-[#C5A66A] shrink-0" />
+                <Sparkles className="w-3 h-3 text-[#F0A92E] shrink-0" />
               </div>
               <p className="text-[10px] text-purple-300 truncate font-semibold uppercase">Super Administrator</p>
             </div>
@@ -121,7 +121,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all ${
                     isActive
-                      ? 'bg-[#173D32] text-[#C5A66A] border border-[#2F7058] font-bold shadow-sm'
+                      ? 'bg-[#1B1F4A] text-[#F0A92E] border border-[#5B6BD6] font-bold shadow-sm'
                       : 'text-stone-300 hover:text-white hover:bg-stone-800'
                   }`}
                 >
@@ -149,7 +149,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
             }}
             className="w-full flex items-center gap-2 text-xs text-stone-300 hover:text-white py-2 px-3 rounded-xl hover:bg-stone-800 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 text-[#C5A66A]" />
+            <ArrowLeft className="w-4 h-4 text-[#F0A92E]" />
             <span>Switch to Guest Website</span>
           </button>
 
@@ -177,7 +177,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
             </button>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <h1 className="font-serif text-lg font-bold text-[#173D32]">
+              <h1 className="font-serif text-lg font-bold text-[#1B1F4A]">
                 Marketplace Trust & Safety Console
               </h1>
             </div>

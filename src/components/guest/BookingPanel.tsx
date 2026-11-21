@@ -46,7 +46,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
         {/* Header: Price & Rating */}
         <div className="flex items-baseline justify-between pb-5 border-b border-stone-100">
           <div>
-            <span className="text-2xl font-serif font-bold text-[#173D32]">
+            <span className="text-2xl font-serif font-bold text-[#1B1F4A]">
               {BRAND.currency.symbol}{property.pricePerNight.toLocaleString()}
             </span>
             <span className="text-xs text-stone-400"> / night</span>
@@ -56,7 +56,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
               </span>
             )}
           </div>
-          <div className="flex items-center gap-1 text-xs font-semibold text-[#252A27]">
+          <div className="flex items-center gap-1 text-xs font-semibold text-[#1B1F4A]">
             <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
             <span>{property.rating}</span>
             <span className="text-stone-400 font-normal">({property.reviewCount})</span>
@@ -65,36 +65,36 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
 
         {/* Date & Guest Selectors Box */}
         <div className="mt-5 border border-stone-300 rounded-2xl overflow-hidden divide-y divide-stone-200">
-          <div className="grid grid-cols-2 divide-x divide-stone-200 bg-[#F8F7F1]/30">
+          <div className="grid grid-cols-2 divide-x divide-stone-200 bg-[#EEF0F8]/30">
             {/* Check-in */}
             <div className="p-3">
-              <label className="block text-[10px] font-bold uppercase tracking-wider text-[#173D32]">
+              <label className="block text-[10px] font-bold uppercase tracking-wider text-[#1B1F4A]">
                 Check-In
               </label>
               <div className="flex items-center gap-1.5 mt-1">
-                <Calendar className="w-3.5 h-3.5 text-[#C5A66A]" />
+                <Calendar className="w-3.5 h-3.5 text-[#F0A92E]" />
                 <input
                   type="date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full text-xs font-medium text-[#252A27] bg-transparent focus:outline-hidden cursor-pointer"
+                  className="w-full text-xs font-medium text-[#1B1F4A] bg-transparent focus:outline-hidden cursor-pointer"
                 />
               </div>
             </div>
 
             {/* Check-out */}
             <div className="p-3">
-              <label className="block text-[10px] font-bold uppercase tracking-wider text-[#173D32]">
+              <label className="block text-[10px] font-bold uppercase tracking-wider text-[#1B1F4A]">
                 Check-Out
               </label>
               <div className="flex items-center gap-1.5 mt-1">
-                <Calendar className="w-3.5 h-3.5 text-[#C5A66A]" />
+                <Calendar className="w-3.5 h-3.5 text-[#F0A92E]" />
                 <input
                   type="date"
                   value={checkOut}
                   min={checkIn}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full text-xs font-medium text-[#252A27] bg-transparent focus:outline-hidden cursor-pointer"
+                  className="w-full text-xs font-medium text-[#1B1F4A] bg-transparent focus:outline-hidden cursor-pointer"
                 />
               </div>
             </div>
@@ -102,16 +102,16 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
 
           {/* Guest Count */}
           <div className="p-3 relative bg-white">
-            <label className="block text-[10px] font-bold uppercase tracking-wider text-[#173D32]">
+            <label className="block text-[10px] font-bold uppercase tracking-wider text-[#1B1F4A]">
               Guests
             </label>
             <button
               type="button"
               onClick={() => setGuestPickerOpen(!guestPickerOpen)}
-              className="w-full flex items-center justify-between text-xs font-medium text-[#252A27] mt-1"
+              className="w-full flex items-center justify-between text-xs font-medium text-[#1B1F4A] mt-1"
             >
               <span className="flex items-center gap-2">
-                <Users className="w-3.5 h-3.5 text-[#C5A66A]" />
+                <Users className="w-3.5 h-3.5 text-[#F0A92E]" />
                 <span>{guests} {guests === 1 ? 'Guest' : 'Guests'}</span>
               </span>
               <ChevronDown className="w-4 h-4 text-stone-400" />
@@ -120,7 +120,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
             {guestPickerOpen && (
               <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-xl border border-stone-200 p-4 z-30">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-[#173D32]">Capacity ({property.maxGuests} max)</span>
+                  <span className="text-xs font-semibold text-[#1B1F4A]">Capacity ({property.maxGuests} max)</span>
                   <div className="flex items-center gap-3">
                     <button
                       type="button"
@@ -144,7 +144,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
                 <button
                   type="button"
                   onClick={() => setGuestPickerOpen(false)}
-                  className="mt-3 w-full py-1.5 text-xs font-semibold text-[#173D32] bg-[#F8F7F1] rounded-lg"
+                  className="mt-3 w-full py-1.5 text-xs font-semibold text-[#1B1F4A] bg-[#EEF0F8] rounded-lg"
                 >
                   Close
                 </button>
@@ -157,9 +157,9 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
         <button
           type="button"
           onClick={handleReserve}
-          className="w-full mt-5 bg-[#173D32] hover:bg-[#2F7058] text-white font-semibold py-3.5 px-4 rounded-xl transition-all shadow-lg shadow-[#173D32]/20 flex items-center justify-center gap-2 cursor-pointer group"
+          className="w-full mt-5 bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white font-semibold py-3.5 px-4 rounded-xl transition-all shadow-lg shadow-[#1B1F4A]/20 flex items-center justify-center gap-2 cursor-pointer group"
         >
-          <Sparkles className="w-4 h-4 text-[#C5A66A] group-hover:scale-110 transition-transform" />
+          <Sparkles className="w-4 h-4 text-[#F0A92E] group-hover:scale-110 transition-transform" />
           <span>Reserve Sanctuary</span>
         </button>
 
@@ -174,7 +174,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
             <span>
               {BRAND.currency.symbol}{property.pricePerNight.toLocaleString()} × {pricing.nights} {pricing.nights === 1 ? 'night' : 'nights'}
             </span>
-            <span className="font-medium text-[#252A27]">
+            <span className="font-medium text-[#1B1F4A]">
               {BRAND.currency.symbol}{pricing.baseTotal.toLocaleString()}
             </span>
           </div>
@@ -184,7 +184,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
               <span>Sanctuary Cleaning & Prep</span>
               <Info className="w-3 h-3 text-stone-300" />
             </span>
-            <span className="font-medium text-[#252A27]">
+            <span className="font-medium text-[#1B1F4A]">
               {BRAND.currency.symbol}{pricing.cleaningFee.toLocaleString()}
             </span>
           </div>
@@ -194,7 +194,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
               <span>Platform Service & Concierge</span>
               <Info className="w-3 h-3 text-stone-300" />
             </span>
-            <span className="font-medium text-[#252A27]">
+            <span className="font-medium text-[#1B1F4A]">
               {BRAND.currency.symbol}{pricing.serviceFee.toLocaleString()}
             </span>
           </div>
@@ -204,7 +204,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
               <span>Estimated Taxes & GST (12%)</span>
               <Info className="w-3 h-3 text-stone-300" />
             </span>
-            <span className="font-medium text-[#252A27]">
+            <span className="font-medium text-[#1B1F4A]">
               {BRAND.currency.symbol}{pricing.taxes.toLocaleString()}
             </span>
           </div>
@@ -217,7 +217,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
           )}
 
           {/* Grand Total */}
-          <div className="pt-3 border-t border-stone-200 flex items-center justify-between text-sm font-bold text-[#173D32]">
+          <div className="pt-3 border-t border-stone-200 flex items-center justify-between text-sm font-bold text-[#1B1F4A]">
             <span>Total Amount</span>
             <span className="text-lg font-serif">
               {BRAND.currency.symbol}{pricing.grandTotal.toLocaleString()}
@@ -226,10 +226,10 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
         </div>
 
         {/* Cancellation policy guarantee */}
-        <div className="mt-5 p-3 rounded-xl bg-[#F8F7F1] border border-stone-200/60 text-[11px] text-stone-600 flex items-start gap-2">
-          <Info className="w-4 h-4 text-[#2F7058] shrink-0 mt-0.5" />
+        <div className="mt-5 p-3 rounded-xl bg-[#EEF0F8] border border-stone-200/60 text-[11px] text-stone-600 flex items-start gap-2">
+          <Info className="w-4 h-4 text-[#5B6BD6] shrink-0 mt-0.5" />
           <div>
-            <strong className="text-[#173D32]">{property.cancellationPolicy} Cancellation:</strong>{' '}
+            <strong className="text-[#1B1F4A]">{property.cancellationPolicy} Cancellation:</strong>{' '}
             Full refund permitted up to 5 days prior to arrival.
           </div>
         </div>
@@ -239,7 +239,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-stone-200 p-4 px-6 flex items-center justify-between shadow-2xl">
         <div>
           <div className="flex items-baseline gap-1">
-            <span className="text-lg font-bold text-[#173D32]">
+            <span className="text-lg font-bold text-[#1B1F4A]">
               {BRAND.currency.symbol}{property.pricePerNight.toLocaleString()}
             </span>
             <span className="text-xs text-stone-400">/ night</span>
@@ -252,7 +252,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
         <button
           type="button"
           onClick={handleReserve}
-          className="bg-[#173D32] hover:bg-[#2F7058] text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md transition-all cursor-pointer"
+          className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md transition-all cursor-pointer"
         >
           Reserve
         </button>

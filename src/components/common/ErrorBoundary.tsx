@@ -37,13 +37,13 @@ export class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-[#F8F7F1] flex items-center justify-center p-6 text-left font-sans">
+        <div className="min-h-screen bg-[#EEF0F8] flex items-center justify-center p-6 text-left font-sans">
           <div className="max-w-md w-full bg-white rounded-3xl p-8 border border-stone-200 shadow-xl space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center">
               <AlertTriangle className="w-6 h-6" />
             </div>
 
-            <h2 className="font-serif text-2xl font-bold text-[#173D32]">
+            <h2 className="font-serif text-2xl font-bold text-[#1B1F4A]">
               Sanctuary Encountered an Issue
             </h2>
 
@@ -61,7 +61,7 @@ export class ErrorBoundary extends Component<Props, State> {
               <button
                 type="button"
                 onClick={this.handleReset}
-                className="flex-1 bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold py-3 px-4 rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                className="flex-1 bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold py-3 px-4 rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 <span>Reset to Defaults & Reload</span>

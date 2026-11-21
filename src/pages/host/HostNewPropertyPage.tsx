@@ -176,7 +176,7 @@ export const HostNewPropertyPage: React.FC = () => {
         {/* Wizard Header */}
         <div className="border-b border-stone-200 pb-5">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2F7058]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#5B6BD6]">
               Step {currentStep} of {totalSteps}
             </span>
             <span className="text-xs font-semibold text-stone-500">
@@ -186,7 +186,7 @@ export const HostNewPropertyPage: React.FC = () => {
 
           <div className="w-full h-2 bg-stone-200 rounded-full mt-2 overflow-hidden">
             <div
-              className="h-full bg-[#173D32] transition-all duration-300"
+              className="h-full bg-[#1B1F4A] transition-all duration-300"
               style={{ width: `${(currentStep / totalSteps) * 100}%` }}
             />
           </div>
@@ -198,7 +198,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {/* Step 1: Category */}
             {currentStep === 1 && (
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                   Which best describes your sanctuary?
                 </h2>
                 <p className="text-xs text-stone-500 mb-6">
@@ -213,11 +213,11 @@ export const HostNewPropertyPage: React.FC = () => {
                       onClick={() => setCategory(cat)}
                       className={`p-4 rounded-2xl border text-left text-xs font-semibold transition-all cursor-pointer ${
                         category === cat
-                          ? 'border-[#173D32] bg-[#173D32]/5 text-[#173D32] ring-2 ring-[#173D32]'
+                          ? 'border-[#1B1F4A] bg-[#1B1F4A]/5 text-[#1B1F4A] ring-2 ring-[#1B1F4A]'
                           : 'border-stone-200 text-stone-700 hover:bg-stone-50'
                       }`}
                     >
-                      <Building className="w-5 h-5 text-[#2F7058] mb-2" />
+                      <Building className="w-5 h-5 text-[#5B6BD6] mb-2" />
                       <span>{cat}</span>
                     </button>
                   ))}
@@ -229,7 +229,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 2 && (
               <div className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     Sanctuary Title & Headline
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -246,7 +246,7 @@ export const HostNewPropertyPage: React.FC = () => {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="e.g. Whispering Teak Bamboo Haven"
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                   />
                 </div>
 
@@ -259,7 +259,7 @@ export const HostNewPropertyPage: React.FC = () => {
                     value={tagline}
                     onChange={(e) => setTagline(e.target.value)}
                     placeholder="e.g. Perched 40ft high in ancient rosewood groves"
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32]"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A]"
                   />
                 </div>
 
@@ -292,7 +292,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 3 && (
               <div className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     Where is your sanctuary located?
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -352,7 +352,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 4 && (
               <div className="space-y-6">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     Guest Capacity & Sleeping Arrangements
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -415,7 +415,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {/* Step 5: Amenities */}
             {currentStep === 5 && (
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                   Sanctuary Amenities
                 </h2>
                 <p className="text-xs text-stone-500 mb-6">
@@ -432,12 +432,12 @@ export const HostNewPropertyPage: React.FC = () => {
                         onClick={() => toggleAmenity(a.id)}
                         className={`p-3 rounded-xl border text-xs font-medium text-left flex items-center justify-between transition-colors cursor-pointer ${
                           isChecked
-                            ? 'bg-emerald-50 border-[#2F7058] text-[#173D32] font-semibold'
+                            ? 'bg-emerald-50 border-[#5B6BD6] text-[#1B1F4A] font-semibold'
                             : 'border-stone-200 text-stone-700 hover:bg-stone-50'
                         }`}
                       >
                         <span>{a.label}</span>
-                        {isChecked && <Check className="w-4 h-4 text-[#2F7058]" />}
+                        {isChecked && <Check className="w-4 h-4 text-[#5B6BD6]" />}
                       </button>
                     );
                   })}
@@ -449,7 +449,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 6 && (
               <div className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     Describe Your Sanctuary
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -462,7 +462,7 @@ export const HostNewPropertyPage: React.FC = () => {
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="Awaken to morning mist and birdsong. Handcrafted from reclaimed teak..."
-                  className="w-full text-xs p-4 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#173D32] leading-relaxed"
+                  className="w-full text-xs p-4 rounded-xl border border-stone-300 focus:outline-hidden focus:ring-2 focus:ring-[#1B1F4A] leading-relaxed"
                 />
               </div>
             )}
@@ -471,7 +471,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 7 && (
               <div className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     Sanctuary Photography
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -515,7 +515,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 8 && (
               <div className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     Pricing & Cancellation
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -560,7 +560,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 9 && (
               <div className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     House Rules & Sanctuary Timings
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -595,7 +595,7 @@ export const HostNewPropertyPage: React.FC = () => {
                       type="checkbox"
                       checked={petsAllowed}
                       onChange={(e) => setPetsAllowed(e.target.checked)}
-                      className="w-4 h-4 accent-[#173D32]"
+                      className="w-4 h-4 accent-[#1B1F4A]"
                     />
                     <span>Pets permitted with prior notice</span>
                   </label>
@@ -604,7 +604,7 @@ export const HostNewPropertyPage: React.FC = () => {
                       type="checkbox"
                       checked={smokingAllowed}
                       onChange={(e) => setSmokingAllowed(e.target.checked)}
-                      className="w-4 h-4 accent-[#173D32]"
+                      className="w-4 h-4 accent-[#1B1F4A]"
                     />
                     <span>Designated smoking areas on property</span>
                   </label>
@@ -616,7 +616,7 @@ export const HostNewPropertyPage: React.FC = () => {
             {currentStep === 10 && (
               <div className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-bold text-[#173D32] mb-1">
+                  <h2 className="font-serif text-2xl font-bold text-[#1B1F4A] mb-1">
                     Review Sanctuary Details
                   </h2>
                   <p className="text-xs text-stone-500 mb-4">
@@ -624,10 +624,10 @@ export const HostNewPropertyPage: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#F8F7F1] border border-stone-200 text-xs space-y-2">
+                <div className="p-4 rounded-2xl bg-[#EEF0F8] border border-stone-200 text-xs space-y-2">
                   <div className="flex justify-between">
                     <span className="text-stone-500">Title:</span>
-                    <strong className="text-[#173D32]">{title || 'Untitled Sanctuary'}</strong>
+                    <strong className="text-[#1B1F4A]">{title || 'Untitled Sanctuary'}</strong>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-stone-500">Category:</span>
@@ -676,7 +676,7 @@ export const HostNewPropertyPage: React.FC = () => {
               <button
                 type="button"
                 onClick={handleNext}
-                className="bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold px-6 py-2.5 rounded-xl transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+                className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold px-6 py-2.5 rounded-xl transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
               >
                 <span>Continue</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -685,9 +685,9 @@ export const HostNewPropertyPage: React.FC = () => {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="bg-[#2F7058] hover:bg-[#173D32] text-white text-xs font-semibold px-8 py-3 rounded-xl transition-all shadow-md flex items-center gap-2 cursor-pointer"
+                className="bg-[#5B6BD6] hover:bg-[#1B1F4A] text-white text-xs font-semibold px-8 py-3 rounded-xl transition-all shadow-md flex items-center gap-2 cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-[#C5A66A]" />
+                <Sparkles className="w-4 h-4 text-[#F0A92E]" />
                 <span>Submit Sanctuary for Approval</span>
               </button>
             )}

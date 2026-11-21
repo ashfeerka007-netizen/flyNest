@@ -18,17 +18,17 @@ export const BecomeAHostPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F1] flex flex-col">
+    <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
           {/* Hero Banner */}
-          <div className="relative rounded-3xl overflow-hidden bg-[#173D32] text-white p-8 sm:p-16 mb-16 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div className="relative rounded-3xl overflow-hidden bg-[#1B1F4A] text-white p-8 sm:p-16 mb-16 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10">
             <MigrationPattern opacity={0.2} />
 
             <div className="max-w-xl relative z-10">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#C5A66A]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#F0A92E]">
                 Host with Reverence
               </span>
               <h1 className="font-serif text-3xl sm:text-5xl font-bold mt-2 leading-tight">
@@ -42,7 +42,7 @@ export const BecomeAHostPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleStartHosting}
-                  className="bg-[#C5A66A] hover:bg-[#b09257] text-[#173D32] font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2 cursor-pointer"
+                  className="bg-[#F0A92E] hover:bg-[#b09257] text-[#1B1F4A] font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2 cursor-pointer"
                 >
                   <span>Launch Property Wizard</span>
                   <ArrowRight className="w-4 h-4" />
@@ -69,20 +69,20 @@ export const BecomeAHostPage: React.FC = () => {
           {/* Hosting Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-6 rounded-3xl border border-stone-200 shadow-2xs">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#2F7058] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#5B6BD6] flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#173D32]">Competitive Host Revenue</h3>
+              <h3 className="font-serif text-xl font-bold text-[#1B1F4A]">Competitive Host Revenue</h3>
               <p className="text-xs text-stone-600 mt-2 leading-relaxed">
                 Keep 92% of your booking earnings with only an 8% flat platform commission. Direct payouts scheduled seamlessly after guest check-in.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-3xl border border-stone-200 shadow-2xs">
-              <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#C5A66A] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#F0A92E] flex items-center justify-center mb-4">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-[#173D32]">₹25,00,000 Host Protection</h3>
+              <h3 className="font-serif text-lg font-bold text-[#1B1F4A]">₹25,00,000 Host Protection</h3>
               <p className="text-xs text-stone-600 mt-2 leading-relaxed">
                 Comprehensive damage protection and liability coverage included with every booking. Verified guest IDs on all reservations.
               </p>
@@ -92,7 +92,7 @@ export const BecomeAHostPage: React.FC = () => {
               <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center mb-4">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-[#173D32]">Curation & Editorial Showcase</h3>
+              <h3 className="font-serif text-lg font-bold text-[#1B1F4A]">Curation & Editorial Showcase</h3>
               <p className="text-xs text-stone-600 mt-2 leading-relaxed">
                 Your listing is spotlighted to international naturalists, photographers, architectural enthusiasts, and executive retreat leaders.
               </p>

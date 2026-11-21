@@ -19,14 +19,14 @@ export const HostSettingsPage: React.FC = () => {
     <HostLayout>
       <div className="max-w-2xl mx-auto space-y-8 text-left pb-16">
         <div className="pb-6 border-b border-stone-200">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#2F7058]">Preferences</span>
-          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#173D32] mt-1">Host Settings</h1>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#5B6BD6]">Preferences</span>
+          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1B1F4A] mt-1">Host Settings</h1>
           <p className="text-xs text-stone-500 mt-1">Configure banking settlements, payout methods, and hosting preferences</p>
         </div>
 
         <form onSubmit={handleSave} className="bg-white p-8 rounded-3xl border border-stone-200 shadow-xs space-y-6">
-          <h3 className="font-serif text-base font-bold text-[#173D32] flex items-center gap-2">
-            <Building className="w-4 h-4 text-[#C5A66A]" />
+          <h3 className="font-serif text-base font-bold text-[#1B1F4A] flex items-center gap-2">
+            <Building className="w-4 h-4 text-[#F0A92E]" />
             <span>Bank Payout Account</span>
           </h3>
 
@@ -67,7 +67,7 @@ export const HostSettingsPage: React.FC = () => {
           <div className="pt-2">
             <button
               type="submit"
-              className="bg-[#173D32] hover:bg-[#2F7058] text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
+              className="bg-[#1B1F4A] hover:bg-[#5B6BD6] text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
             >
               <Save className="w-4 h-4" />
               <span>Save Host Settings</span>
