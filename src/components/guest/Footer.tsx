@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
             <span className="text-[#F0A92E] text-xs font-semibold tracking-widest uppercase">
               The Migratory Journal
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold mt-2 text-white">
+            <h3 className="text-2xl sm:text-3xl font-bold mt-2 text-white">
               Receive secret sanctuaries, seasonal flight paths & private listings
             </h3>
             <p className="text-stone-300 text-sm mt-2 leading-relaxed">

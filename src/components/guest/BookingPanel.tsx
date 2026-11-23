@@ -46,7 +46,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
         {/* Header: Price & Rating */}
         <div className="flex items-baseline justify-between pb-5 border-b border-stone-100">
           <div>
-            <span className="text-2xl font-serif font-bold text-[#1B1F4A]">
+            <span className="text-2xl font-bold text-[#1B1F4A]">
               {BRAND.currency.symbol}{property.pricePerNight.toLocaleString()}
             </span>
             <span className="text-xs text-stone-400"> / night</span>
@@ -219,7 +219,7 @@ export const BookingPanel: React.FC<BookingPanelProps> = ({ property }) => {
           {/* Grand Total */}
           <div className="pt-3 border-t border-stone-200 flex items-center justify-between text-sm font-bold text-[#1B1F4A]">
             <span>Total Amount</span>
-            <span className="text-lg font-serif">
+            <span className="text-lg font-bold">
               {BRAND.currency.symbol}{pricing.grandTotal.toLocaleString()}
             </span>
           </div>
