@@ -12,9 +12,6 @@
     --color-sand: #DCE1F2;
     --color-charcoal: #1B1F4A;
     --color-gold: #F0A92E;
-    --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
-    --font-serif: 'Fraunces', Georgia, serif;
-    --font-display: 'Fraunces', Georgia, serif;
   }
 }
 
@@ -29,9 +26,8 @@
   --color-sand: #DCE1F2;
   --color-charcoal: #1B1F4A;
   --color-gold: #F0A92E;
-  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 body {
