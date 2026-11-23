@@ -39,22 +39,6 @@ export const CheckoutPage: React.FC = () => {
 
   const pricing = property ? calculateBookingPrice(property, checkIn, checkOut, guestsCount) : null;
 
-  if (!property || !pricing) {
-    return (
-      <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
-        <Navbar />
-        <main className="flex-1 pt-32 pb-16 text-center max-w-md mx-auto px-4">
-          <h2 className="font-serif text-2xl font-bold text-[#1B1F4A]">No Sanctuary Selected</h2>
-          <p className="text-xs text-stone-500 mt-2">Please select a sanctuary from our catalog before proceeding to checkout.</p>
-          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#1B1F4A] text-white text-xs font-semibold">
-            Explore Sanctuaries
-          </Link>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
   // Form State
   const [fullName, setFullName] = useState(currentUser?.name || 'Aarav Mehta');
   const [email, setEmail] = useState(currentUser?.email || 'guest@demo.com');
@@ -72,6 +56,22 @@ export const CheckoutPage: React.FC = () => {
   const [bankName, setBankName] = useState('HDFC Bank');
   const [walletProvider, setWalletProvider] = useState('PhonePe');
   const [isProcessing, setIsProcessing] = useState(false);
+
+  if (!property || !pricing) {
+    return (
+      <div className="min-h-screen bg-[#EEF0F8] flex flex-col">
+        <Navbar />
+        <main className="flex-1 pt-32 pb-16 text-center max-w-md mx-auto px-4">
+          <h2 className="font-serif text-2xl font-bold text-[#1B1F4A]">No Sanctuary Selected</h2>
+          <p className="text-xs text-stone-500 mt-2">Please select a sanctuary from our catalog before proceeding to checkout.</p>
+          <Link to="/explore" className="mt-4 inline-block px-5 py-2.5 rounded-xl bg-[#1B1F4A] text-white text-xs font-semibold">
+            Explore Sanctuaries
+          </Link>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   const handleCompleteBooking = (e: React.FormEvent) => {
     e.preventDefault();
